@@ -1,4 +1,3 @@
-# preprocess.py - Extract features from fruit images with logging
 import os
 import cv2
 import numpy as np
@@ -14,6 +13,8 @@ def extract_features(data_dir):
     total_images = sum([len(os.listdir(os.path.join(data_dir, fruit_class))) for fruit_class in os.listdir(data_dir) if os.path.isdir(os.path.join(data_dir, fruit_class))])
     processed_images = 0
     
+    print(f"Started feature extraction from {data_dir}. Total images to process: {total_images}")
+    
     for fruit_class in os.listdir(data_dir):
         class_path = os.path.join(data_dir, fruit_class)
         if not os.path.isdir(class_path):
@@ -21,10 +22,15 @@ def extract_features(data_dir):
         
         # Extract base fruit name (e.g., 'Apple' from 'Apple1', 'Apple small')
         base_class = re.sub(r'[^a-zA-Z]', '', fruit_class)  # Remove numbers and spaces
+        print(f"Processing class: {base_class}")
         
         for img_name in os.listdir(class_path):
             img_path = os.path.join(class_path, img_name)
             img = cv2.imread(img_path)
+            if img is None:
+                print(f"Warning: Skipping {img_name} due to read error.")
+                continue
+            
             img = cv2.resize(img, (100, 100))
             
             # Extract color histogram
