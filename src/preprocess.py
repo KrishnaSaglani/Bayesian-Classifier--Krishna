@@ -53,4 +53,4 @@ def extract_features(data_dir):
     print("Feature extraction complete. Saved to features.csv")
 
 # Run feature extraction
-extract_features("Fruits 360/Train")
+extract_features("fruits-360/Training")
