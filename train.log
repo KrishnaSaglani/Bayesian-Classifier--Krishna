@@ -1,0 +1,220 @@
+2025-04-02 12:00:17,557 - Training started...
+2025-04-02 12:00:17,558 - Calculating class priors...
+2025-04-02 12:00:17,568 - Calculated prior for class 'Apple': 0.1565
+2025-04-02 12:00:17,569 - Calculated prior for class 'AppleBraeburn': 0.0157
+2025-04-02 12:00:17,570 - Calculated prior for class 'AppleCore': 0.0073
+2025-04-02 12:00:17,570 - Calculated prior for class 'AppleCrimsonSnow': 0.0145
+2025-04-02 12:00:17,571 - Calculated prior for class 'AppleGolden': 0.0470
+2025-04-02 12:00:17,571 - Calculated prior for class 'AppleGrannySmith': 0.0155
+2025-04-02 12:00:17,571 - Calculated prior for class 'ApplePinkLady': 0.0147
+2025-04-02 12:00:17,572 - Calculated prior for class 'AppleRed': 0.0454
+2025-04-02 12:00:17,572 - Calculated prior for class 'AppleRedDelicious': 0.0159
+2025-04-02 12:00:17,575 - Calculated prior for class 'AppleRedYellow': 0.0370
+2025-04-02 12:00:17,575 - Calculated prior for class 'AppleRotten': 0.0157
+2025-04-02 12:00:17,576 - Calculated prior for class 'Applehit': 0.0224
+2025-04-02 12:00:17,576 - Calculated prior for class 'Appleworm': 0.0220
+2025-04-02 12:00:17,576 - Calculated prior for class 'Apricot': 0.0155
+2025-04-02 12:00:17,577 - Calculated prior for class 'Avocado': 0.0140
+2025-04-02 12:00:17,577 - Calculated prior for class 'Avocadoripe': 0.0151
+2025-04-02 12:00:17,578 - Calculated prior for class 'Banana': 0.0228
+2025-04-02 12:00:17,578 - Calculated prior for class 'BananaLadyFinger': 0.0148
+2025-04-02 12:00:17,578 - Calculated prior for class 'BananaRed': 0.0158
+2025-04-02 12:00:17,578 - Calculated prior for class 'Beans': 0.0075
+2025-04-02 12:00:17,579 - Calculated prior for class 'Beetroot': 0.0147
+2025-04-02 12:00:17,579 - Calculated prior for class 'Blackberrie': 0.0223
+2025-04-02 12:00:17,579 - Calculated prior for class 'Blackberriehalfrippen': 0.0145
+2025-04-02 12:00:17,580 - Calculated prior for class 'Blackberrienotrippen': 0.0216
+2025-04-02 12:00:17,581 - Calculated prior for class 'Blueberry': 0.0151
+2025-04-02 12:00:17,583 - Calculated prior for class 'Cabbagered': 0.0047
+2025-04-02 12:00:17,584 - Calculated prior for class 'Cabbagewhite': 0.0045
+2025-04-02 12:00:17,585 - Calculated prior for class 'Cactusfruit': 0.0155
+2025-04-02 12:00:17,586 - Calculated prior for class 'Cactusfruitgreen': 0.0230
+2025-04-02 12:00:17,587 - Calculated prior for class 'Cactusfruitred': 0.0227
+2025-04-02 12:00:17,588 - Calculated prior for class 'Cajuseed': 0.0080
+2025-04-02 12:00:17,589 - Calculated prior for class 'Cantaloupe': 0.0317
+2025-04-02 12:00:17,590 - Calculated prior for class 'Carambula': 0.0160
+2025-04-02 12:00:17,591 - Calculated prior for class 'Carrot': 0.0047
+2025-04-02 12:00:17,592 - Calculated prior for class 'Cauliflower': 0.0234
+2025-04-02 12:00:17,592 - Calculated prior for class 'Cherimoya': 0.0300
+2025-04-02 12:00:17,593 - Calculated prior for class 'Cherry': 0.0388
+2025-04-02 12:00:17,594 - Calculated prior for class 'CherryRainier': 0.0244
+2025-04-02 12:00:17,595 - Calculated prior for class 'CherryWaxBlack': 0.0160
+2025-04-02 12:00:17,596 - Calculated prior for class 'CherryWaxRed': 0.0159
+2025-04-02 12:00:17,597 - Calculated prior for class 'CherryWaxYellow': 0.0155
+2025-04-02 12:00:17,598 - Calculated prior for class 'CherryWaxnotrippen': 0.0222
+2025-04-02 12:00:17,598 - Calculated prior for class 'Chestnut': 0.0155
+2025-04-02 12:00:17,600 - Calculated prior for class 'Clementine': 0.0162
+2025-04-02 12:00:17,601 - Calculated prior for class 'Cocos': 0.0157
+2025-04-02 12:00:17,602 - Calculated prior for class 'Corn': 0.0120
+2025-04-02 12:00:17,603 - Class priors calculation completed in 0.05 seconds.
+
+2025-04-02 12:00:17,604 - Calculating means and variances for each class...
+2025-04-02 12:00:17,643 - Class 'Apple' - Mean: [0.11091809 0.17913842 0.06390399]... Variance: [0.02089865 0.03617818 0.0131155 ]...
+2025-04-02 12:00:17,650 - Class 'AppleBraeburn' - Mean: [0.13755631 0.26867641 0.24184091]... Variance: [0.01125131 0.00285492 0.00324094]...
+2025-04-02 12:00:17,656 - Class 'AppleCore' - Mean: [0.00378732 0.00869471 0.00010736]... Variance: [1.86450910e-05 2.80920330e-05 1.02243977e-06]...
+2025-04-02 12:00:17,660 - Class 'AppleCrimsonSnow' - Mean: [0.02666522 0.42574109 0.36298843]... Variance: [0.00050474 0.02497742 0.004925  ]...
+2025-04-02 12:00:17,671 - Class 'AppleGolden' - Mean: [1.30525576e-02 1.72680722e-02 1.04371768e-06]... Variance: [7.16208820e-04 5.89519015e-04 1.00031973e-06]...
+2025-04-02 12:00:17,675 - Class 'AppleGrannySmith' - Mean: [0.07011555 0.02159982 0.        ]... Variance: [1.19209312e-03 1.11988525e-04 1.00000000e-06]...
+2025-04-02 12:00:17,680 - Class 'ApplePinkLady' - Mean: [0.01468767 0.13578112 0.19496204]... Variance: [0.00030284 0.00629362 0.01774454]...
+2025-04-02 12:00:17,690 - Class 'AppleRed' - Mean: [0.06684777 0.16631392 0.12780252]... Variance: [0.00619859 0.00489116 0.00678769]...
+2025-04-02 12:00:17,694 - Class 'AppleRedDelicious' - Mean: [0. 0. 0.]... Variance: [1.e-06 1.e-06 1.e-06]...
+2025-04-02 12:00:17,702 - Class 'AppleRedYellow' - Mean: [0.01529327 0.12462347 0.09216312]... Variance: [0.00034628 0.0198185  0.00827846]...
+2025-04-02 12:00:17,707 - Class 'AppleRotten' - Mean: [0.12365628 0.305641   0.28188504]... Variance: [0.00496928 0.01074511 0.00631759]...
+2025-04-02 12:00:17,712 - Class 'Applehit' - Mean: [0.00726646 0.01417383 0.00843643]... Variance: [7.64020905e-05 2.91806181e-04 1.45044811e-04]...
+2025-04-02 12:00:17,717 - Class 'Appleworm' - Mean: [0.35803686 0.24739687 0.07560476]... Variance: [0.01623466 0.01657468 0.00389688]...
+2025-04-02 12:00:17,721 - Class 'Apricot' - Mean: [0.00107543 0.04587409 0.09074403]... Variance: [4.93710257e-06 2.37618890e-03 1.85868251e-03]...
+2025-04-02 12:00:17,731 - Class 'Avocado' - Mean: [3.91400174e-01 2.44164403e-03 2.73989894e-05]... Variance: [2.69761942e-02 1.16788142e-05 1.01260609e-06]...
+2025-04-02 12:00:17,765 - Class 'Avocadoripe' - Mean: [0. 0. 0.]... Variance: [1.e-06 1.e-06 1.e-06]...
+2025-04-02 12:00:17,773 - Class 'Banana' - Mean: [4.86353194e-04 7.47760123e-04 5.42236992e-06]... Variance: [1.95620759e-06 2.49770530e-06 1.00095009e-06]...
+2025-04-02 12:00:17,777 - Class 'BananaLadyFinger' - Mean: [0.00748541 0.00358569 0.00888973]... Variance: [7.85435469e-05 1.49526865e-05 2.79096463e-04]...
+2025-04-02 12:00:17,782 - Class 'BananaRed' - Mean: [0.02189386 0.04370417 0.03049189]... Variance: [0.00177077 0.00414843 0.00156217]...
+2025-04-02 12:00:17,794 - Class 'Beans' - Mean: [0.00061164 0.00087607 0.        ]... Variance: [1.41022516e-06 1.20522071e-06 1.00000000e-06]...
+2025-04-02 12:00:17,798 - Class 'Beetroot' - Mean: [6.51160307e-03 5.17194625e-03 8.97726555e-05]... Variance: [2.24290416e-05 3.73452327e-05 1.11120001e-06]...
+2025-04-02 12:00:17,804 - Class 'Blackberrie' - Mean: [4.30675484e-01 2.01994004e-02 1.90154270e-05]... Variance: [1.10879819e-01 3.95643195e-04 1.00736708e-06]...
+2025-04-02 12:00:17,808 - Class 'Blackberriehalfrippen' - Mean: [0.67399195 0.13518566 0.06341261]... Variance: [0.03322656 0.00978828 0.00327954]...
+2025-04-02 12:00:17,813 - Class 'Blackberrienotrippen' - Mean: [0.12557112 0.26179759 0.14991655]... Variance: [0.01047982 0.01891015 0.01815022]...
+2025-04-02 12:00:17,818 - Class 'Blueberry' - Mean: [0.45741033 0.00080593 0.        ]... Variance: [2.13798774e-02 8.09209290e-06 1.00000000e-06]...
+2025-04-02 12:00:17,822 - Class 'Cabbagered' - Mean: [0.00188182 0.02347438 0.        ]... Variance: [1.47430036e-05 6.67779895e-04 1.00000000e-06]...
+2025-04-02 12:00:17,824 - Class 'Cabbagewhite' - Mean: [4.19134849e-05 3.00275003e-06 0.00000000e+00]... Variance: [1.01438825e-06 1.00100083e-06 1.00000000e-06]...
+2025-04-02 12:00:17,828 - Class 'Cactusfruit' - Mean: [2.81154676e-03 2.39365302e-03 1.51104419e-06]... Variance: [5.34200418e-05 1.29215893e-05 1.00087905e-06]...
+2025-04-02 12:00:17,836 - Class 'Cactusfruitgreen' - Mean: [0.01068951 0.00535415 0.00093033]... Variance: [5.63098915e-04 2.58764913e-04 2.18682962e-05]...
+2025-04-02 12:00:17,841 - Class 'Cactusfruitred' - Mean: [0.00553129 0.02813237 0.07706208]... Variance: [8.58860733e-05 1.12015499e-03 3.60482822e-03]...
+2025-04-02 12:00:17,844 - Class 'Cajuseed' - Mean: [0.00221723 0.00832943 0.00017567]... Variance: [6.79032295e-06 8.78224194e-06 1.10742645e-06]...
+2025-04-02 12:00:17,849 - Class 'Cantaloupe' - Mean: [1.98978273e-05 1.17918940e-04 0.00000000e+00]... Variance: [1.01152979e-06 1.10584742e-06 1.00000000e-06]...
+2025-04-02 12:00:17,854 - Class 'Carambula' - Mean: [0.00220563 0.0095472  0.00183788]... Variance: [1.36334981e-05 6.58830468e-05 3.44096237e-06]...
+2025-04-02 12:00:17,856 - Class 'Carrot' - Mean: [2.24072791e-06 2.07930004e-04 8.94667407e-06]... Variance: [1.00028870e-06 1.02522094e-06 1.00138653e-06]...
+2025-04-02 12:00:17,861 - Class 'Cauliflower' - Mean: [0.03301997 0.02421839 0.        ]... Variance: [3.76789419e-04 2.43758913e-04 1.00000000e-06]...
+2025-04-02 12:00:17,869 - Class 'Cherimoya' - Mean: [0.08191582 0.09922426 0.        ]... Variance: [3.07601991e-03 5.46241708e-03 1.00000000e-06]...
+2025-04-02 12:00:17,877 - Class 'Cherry' - Mean: [0.28999649 0.17379287 0.03401819]... Variance: [0.12281503 0.04484618 0.00310221]...
+2025-04-02 12:00:17,888 - Class 'CherryRainier' - Mean: [0.00000000e+00 0.00000000e+00 9.54797484e-07]... Variance: [1.00000000e-06 1.00000000e-06 1.00027486e-06]...
+2025-04-02 12:00:17,907 - Class 'CherryWaxBlack' - Mean: [8.75406399e-01 1.03526450e-01 5.07494516e-07]... Variance: [6.97150481e-04 1.16721020e-03 1.00010173e-06]...
+2025-04-02 12:00:17,913 - Class 'CherryWaxRed' - Mean: [0.02303358 0.55723623 0.5450441 ]... Variance: [0.00091215 0.00513622 0.00539826]...
+2025-04-02 12:00:17,919 - Class 'CherryWaxYellow' - Mean: [0.00000000e+00 0.00000000e+00 1.05522062e-05]... Variance: [1.00000000e-06 1.00000000e-06 1.00350618e-06]...
+2025-04-02 12:00:17,924 - Class 'CherryWaxnotrippen' - Mean: [0.00033423 0.01490474 0.00233452]... Variance: [1.48861017e-06 1.03069989e-04 3.22868158e-05]...
+2025-04-02 12:00:17,928 - Class 'Chestnut' - Mean: [0.06551521 0.2789023  0.03046207]... Variance: [0.01197223 0.05808925 0.00193676]...
+2025-04-02 12:00:17,933 - Class 'Clementine' - Mean: [8.17544762e-06 1.89102371e-03 5.96936386e-03]... Variance: [1.00294704e-06 5.41015750e-06 4.02823634e-05]...
+2025-04-02 12:00:17,937 - Class 'Cocos' - Mean: [0.01100813 0.03484509 0.00019664]... Variance: [1.29958480e-04 2.61635222e-04 1.08060352e-06]...
+2025-04-02 12:00:17,941 - Class 'Corn' - Mean: [3.58059518e-05 8.30517988e-05 0.00000000e+00]... Variance: [1.01284367e-06 1.02095749e-06 1.00000000e-06]...
+2025-04-02 12:00:17,942 - Means and variances calculation completed in 0.34 seconds.
+
+2025-04-02 12:00:17,943 - Making predictions on 6207 test samples...
+2025-04-02 12:00:19,069 - Predicted 100/6207 samples... (1.61%)
+2025-04-02 12:00:20,170 - Predicted 200/6207 samples... (3.22%)
+2025-04-02 12:00:21,271 - Predicted 300/6207 samples... (4.83%)
+2025-04-02 12:00:22,399 - Predicted 400/6207 samples... (6.44%)
+2025-04-02 12:00:23,506 - Predicted 500/6207 samples... (8.06%)
+2025-04-02 12:00:24,608 - Predicted 600/6207 samples... (9.67%)
+2025-04-02 12:00:25,730 - Predicted 700/6207 samples... (11.28%)
+2025-04-02 12:00:26,818 - Predicted 800/6207 samples... (12.89%)
+2025-04-02 12:00:27,929 - Predicted 900/6207 samples... (14.50%)
+2025-04-02 12:00:29,067 - Predicted 1000/6207 samples... (16.11%)
+2025-04-02 12:00:30,168 - Predicted 1100/6207 samples... (17.72%)
+2025-04-02 12:00:31,403 - Predicted 1200/6207 samples... (19.33%)
+2025-04-02 12:00:32,649 - Predicted 1300/6207 samples... (20.94%)
+2025-04-02 12:00:33,842 - Predicted 1400/6207 samples... (22.56%)
+2025-04-02 12:00:35,071 - Predicted 1500/6207 samples... (24.17%)
+2025-04-02 12:00:36,255 - Predicted 1600/6207 samples... (25.78%)
+2025-04-02 12:00:37,444 - Predicted 1700/6207 samples... (27.39%)
+2025-04-02 12:00:38,634 - Predicted 1800/6207 samples... (29.00%)
+2025-04-02 12:00:39,927 - Predicted 1900/6207 samples... (30.61%)
+2025-04-02 12:00:41,126 - Predicted 2000/6207 samples... (32.22%)
+2025-04-02 12:00:42,340 - Predicted 2100/6207 samples... (33.83%)
+2025-04-02 12:00:43,563 - Predicted 2200/6207 samples... (35.44%)
+2025-04-02 12:00:44,780 - Predicted 2300/6207 samples... (37.05%)
+2025-04-02 12:00:45,968 - Predicted 2400/6207 samples... (38.67%)
+2025-04-02 12:00:47,097 - Predicted 2500/6207 samples... (40.28%)
+2025-04-02 12:00:48,270 - Predicted 2600/6207 samples... (41.89%)
+2025-04-02 12:00:49,428 - Predicted 2700/6207 samples... (43.50%)
+2025-04-02 12:00:50,599 - Predicted 2800/6207 samples... (45.11%)
+2025-04-02 12:00:51,834 - Predicted 2900/6207 samples... (46.72%)
+2025-04-02 12:00:53,019 - Predicted 3000/6207 samples... (48.33%)
+2025-04-02 12:00:54,193 - Predicted 3100/6207 samples... (49.94%)
+2025-04-02 12:00:55,452 - Predicted 3200/6207 samples... (51.55%)
+2025-04-02 12:00:56,631 - Predicted 3300/6207 samples... (53.17%)
+2025-04-02 12:00:57,867 - Predicted 3400/6207 samples... (54.78%)
+2025-04-02 12:00:59,101 - Predicted 3500/6207 samples... (56.39%)
+2025-04-02 12:01:00,337 - Predicted 3600/6207 samples... (58.00%)
+2025-04-02 12:01:01,636 - Predicted 3700/6207 samples... (59.61%)
+2025-04-02 12:01:02,830 - Predicted 3800/6207 samples... (61.22%)
+2025-04-02 12:01:03,989 - Predicted 3900/6207 samples... (62.83%)
+2025-04-02 12:01:05,131 - Predicted 4000/6207 samples... (64.44%)
+2025-04-02 12:01:06,278 - Predicted 4100/6207 samples... (66.05%)
+2025-04-02 12:01:07,433 - Predicted 4200/6207 samples... (67.67%)
+2025-04-02 12:01:08,662 - Predicted 4300/6207 samples... (69.28%)
+2025-04-02 12:01:09,840 - Predicted 4400/6207 samples... (70.89%)
+2025-04-02 12:01:11,016 - Predicted 4500/6207 samples... (72.50%)
+2025-04-02 12:01:12,162 - Predicted 4600/6207 samples... (74.11%)
+2025-04-02 12:01:13,453 - Predicted 4700/6207 samples... (75.72%)
+2025-04-02 12:01:14,605 - Predicted 4800/6207 samples... (77.33%)
+2025-04-02 12:01:15,760 - Predicted 4900/6207 samples... (78.94%)
+2025-04-02 12:01:16,898 - Predicted 5000/6207 samples... (80.55%)
+2025-04-02 12:01:18,037 - Predicted 5100/6207 samples... (82.17%)
+2025-04-02 12:01:19,150 - Predicted 5200/6207 samples... (83.78%)
+2025-04-02 12:01:20,255 - Predicted 5300/6207 samples... (85.39%)
+2025-04-02 12:01:21,352 - Predicted 5400/6207 samples... (87.00%)
+2025-04-02 12:01:22,572 - Predicted 5500/6207 samples... (88.61%)
+2025-04-02 12:01:23,674 - Predicted 5600/6207 samples... (90.22%)
+2025-04-02 12:01:24,788 - Predicted 5700/6207 samples... (91.83%)
+2025-04-02 12:01:25,912 - Predicted 5800/6207 samples... (93.44%)
+2025-04-02 12:01:27,021 - Predicted 5900/6207 samples... (95.05%)
+2025-04-02 12:01:28,133 - Predicted 6000/6207 samples... (96.67%)
+2025-04-02 12:01:29,277 - Predicted 6100/6207 samples... (98.28%)
+2025-04-02 12:01:30,374 - Predicted 6200/6207 samples... (99.89%)
+2025-04-02 12:01:30,472 - Predicted 6207/6207 samples... (100.00%)
+2025-04-02 12:01:30,472 - Prediction completed in 72.53 seconds.
+
+2025-04-02 12:01:30,483 - Model Accuracy: 97.10%
+2025-04-02 12:01:30,540 - 
+                       precision    recall  f1-score   support
+
+                Apple       1.00      0.94      0.97       950
+        AppleBraeburn       0.94      1.00      0.97       102
+            AppleCore       1.00      1.00      1.00        53
+     AppleCrimsonSnow       0.69      1.00      0.82        83
+          AppleGolden       1.00      1.00      1.00       286
+     AppleGrannySmith       1.00      1.00      1.00       106
+        ApplePinkLady       1.00      0.91      0.95        90
+             AppleRed       0.95      0.98      0.96       285
+    AppleRedDelicious       1.00      1.00      1.00        95
+       AppleRedYellow       1.00      1.00      1.00       245
+          AppleRotten       1.00      1.00      1.00        99
+             Applehit       0.99      1.00      0.99       147
+            Appleworm       1.00      1.00      1.00       150
+              Apricot       1.00      1.00      1.00       107
+              Avocado       1.00      1.00      1.00        80
+          Avocadoripe       1.00      1.00      1.00       115
+               Banana       1.00      1.00      1.00       156
+     BananaLadyFinger       1.00      0.99      0.99        83
+            BananaRed       1.00      1.00      1.00        99
+                Beans       1.00      1.00      1.00        46
+             Beetroot       1.00      0.99      0.99        85
+          Blackberrie       1.00      0.44      0.61       122
+Blackberriehalfrippen       0.58      1.00      0.73        90
+ Blackberrienotrippen       0.87      1.00      0.93       140
+            Blueberry       1.00      1.00      1.00        88
+           Cabbagered       1.00      1.00      1.00        33
+         Cabbagewhite       1.00      1.00      1.00        32
+          Cactusfruit       1.00      1.00      1.00       104
+     Cactusfruitgreen       1.00      1.00      1.00       128
+       Cactusfruitred       1.00      1.00      1.00       148
+             Cajuseed       1.00      1.00      1.00        47
+           Cantaloupe       1.00      1.00      1.00       196
+            Carambula       1.00      1.00      1.00        92
+               Carrot       1.00      1.00      1.00        34
+          Cauliflower       1.00      1.00      1.00       121
+            Cherimoya       1.00      1.00      1.00       228
+               Cherry       1.00      0.87      0.93       266
+        CherryRainier       1.00      1.00      1.00       133
+       CherryWaxBlack       1.00      1.00      1.00        96
+         CherryWaxRed       1.00      1.00      1.00        98
+      CherryWaxYellow       1.00      1.00      1.00       106
+   CherryWaxnotrippen       1.00      1.00      1.00       124
+             Chestnut       0.72      1.00      0.84        65
+           Clementine       1.00      1.00      1.00        88
+                Cocos       1.00      1.00      1.00       100
+                 Corn       1.00      0.98      0.99        66
+
+             accuracy                           0.97      6207
+            macro avg       0.97      0.98      0.97      6207
+         weighted avg       0.98      0.97      0.97      6207
+
