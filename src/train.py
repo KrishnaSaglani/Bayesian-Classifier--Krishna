@@ -1,9 +1,15 @@
-# train.py - Train a Bayesian classifier from scratch (manual calculation with logging)
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report
 import time
+import logging
+
+# Setup logging to file and console
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s', handlers=[
+    logging.FileHandler("train.log"),
+    logging.StreamHandler()
+])
 
 # Load the features and labels
 data = pd.read_csv('features.csv')
@@ -14,34 +20,34 @@ y = data.iloc[:, -1].values   # Label column
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # Log progress
-print("Training started...")
+logging.info("Training started...")
 
 # Manually calculate class priors (P(y))
 class_priors = {}
 start_time = time.time()  # Start time for logging
 
-print(f"Calculating class priors...")
+logging.info(f"Calculating class priors...")
 for c in np.unique(y_train):
     class_priors[c] = np.sum(y_train == c) / len(y_train)
-    print(f"Calculated prior for class '{c}': {class_priors[c]:.4f}")
+    logging.info(f"Calculated prior for class '{c}': {class_priors[c]:.4f}")
 
 priors_calculation_time = time.time() - start_time
-print(f"Class priors calculation completed in {priors_calculation_time:.2f} seconds.\n")
+logging.info(f"Class priors calculation completed in {priors_calculation_time:.2f} seconds.\n")
 
 # Manually calculate means and variances for each class
 means = {}
 variances = {}
-print(f"Calculating means and variances for each class...")
+logging.info(f"Calculating means and variances for each class...")
 
 start_time = time.time()
 for c in np.unique(y_train):
     X_c = X_train[y_train == c]
     means[c] = np.mean(X_c, axis=0)
     variances[c] = np.var(X_c, axis=0) + 1e-6  # Add small value to avoid division by zero
-    print(f"Class '{c}' - Mean: {means[c][:3]}... Variance: {variances[c][:3]}...")  # Log only first 3 features for brevity
+    logging.info(f"Class '{c}' - Mean: {means[c][:3]}... Variance: {variances[c][:3]}...")  # Log only first 3 features for brevity
 
 means_variance_time = time.time() - start_time
-print(f"Means and variances calculation completed in {means_variance_time:.2f} seconds.\n")
+logging.info(f"Means and variances calculation completed in {means_variance_time:.2f} seconds.\n")
 
 # Gaussian likelihood function (for each feature in a class)
 def gaussian_likelihood(x, mean, var):
@@ -52,7 +58,7 @@ def predict(X):
     predictions = []
     total_samples = X.shape[0]
     
-    print(f"Making predictions on {total_samples} test samples...")
+    logging.info(f"Making predictions on {total_samples} test samples...")
     
     start_time = time.time()
     
@@ -73,10 +79,10 @@ def predict(X):
         
         # Log progress every 100 samples
         if (idx + 1) % 100 == 0 or (idx + 1) == total_samples:
-            print(f"Predicted {idx + 1}/{total_samples} samples... ({(idx + 1) / total_samples * 100:.2f}%)")
+            logging.info(f"Predicted {idx + 1}/{total_samples} samples... ({(idx + 1) / total_samples * 100:.2f}%)")
     
     prediction_time = time.time() - start_time
-    print(f"Prediction completed in {prediction_time:.2f} seconds.\n")
+    logging.info(f"Prediction completed in {prediction_time:.2f} seconds.\n")
     
     return np.array(predictions)
 
@@ -85,5 +91,6 @@ y_pred = predict(X_test)
 
 # Evaluate the model
 accuracy = accuracy_score(y_test, y_pred)
-print(f"Model Accuracy: {accuracy * 100:.2f}%")
-print(classification_report(y_test, y_pred))
+logging.info(f"Model Accuracy: {accuracy * 100:.2f}%")
+logging.info(f"\n{classification_report(y_test, y_pred)}")
+
