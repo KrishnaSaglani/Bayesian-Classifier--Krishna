@@ -4,6 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report
 import time
 import logging
+import pickle
 
 # Setup logging (file + console)
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s', handlers=[
@@ -97,3 +98,16 @@ y_pred = predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 logging.info(f"Model Accuracy: {accuracy * 100:.2f}%")
 logging.info(f"\n{classification_report(y_test, y_pred)}")
+
+# Save the model parameters to a file for later use in classification
+model_params = {
+    'class_priors': class_priors,
+    'means': means,
+    'variances': variances,
+    'unique_classes': np.unique(y_train)
+}
+
+with open('model_params.pkl', 'wb') as f:
+    pickle.dump(model_params, f)
+
+logging.info("Model parameters saved to 'model_params.pkl'")
