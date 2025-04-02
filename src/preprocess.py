@@ -1,4 +1,4 @@
-# preprocess.py - Extract features from fruit images
+# preprocess.py - Extract features from fruit images with logging
 import os
 import cv2
 import numpy as np
@@ -9,6 +9,10 @@ import re
 def extract_features(data_dir):
     features = []
     labels = []
+    
+    # Get the total number of images for progress tracking
+    total_images = sum([len(os.listdir(os.path.join(data_dir, fruit_class))) for fruit_class in os.listdir(data_dir) if os.path.isdir(os.path.join(data_dir, fruit_class))])
+    processed_images = 0
     
     for fruit_class in os.listdir(data_dir):
         class_path = os.path.join(data_dir, fruit_class)
@@ -45,6 +49,11 @@ def extract_features(data_dir):
             
             features.append(feature_vector)
             labels.append(base_class)  # Store the base fruit name
+            
+            # Track progress
+            processed_images += 1
+            if processed_images % 50 == 0:  # Log progress every 50 images
+                print(f"Processed {processed_images}/{total_images} images... ({(processed_images/total_images)*100:.2f}%)")
     
     # Save to CSV
     df = pd.DataFrame(features)
