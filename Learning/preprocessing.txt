@@ -1,0 +1,184 @@
+1.                  Colour extractions:
+
+a. hist = cv2.calcHist([img], [0, 1, 2], None, [8, 8, 8], [0, 256, 0, 256, 0, 256])
+    0->blue, 1-> green and 2->red
+
+    None: no mask is applied and so histogram computed for full image
+
+    [8,8,8] - means 8 bins for each of the channels(rgb):
+    so total 8*8*8 = 512 bins' worth space in allocated
+
+    [0, 256, 0, 256, 0, 256]: Range of values for each channel 
+    (0–255 inclusive). 
+    This splits the range into 8 equal intervals per channel
+
+b.hist = cv2.normalize(hist, hist).flatten()
+    normalize the histogram so that values are scale invariant
+    and flatten() converts it into a 1D array from a 3D array
+
+    Basically,
+    a 3D VECTOR is created in space, and each point in (r,g,b) space
+    has a value for r, g, b. each axis ranges from 0 to 8
+    like intensity 0-31 goes in bin 1, .... , 224-255 goes in bin 8
+
+    for ex, if a pixel has r = 120 (bin 4), g= 0 (bin 0), b = 244 (bin 8)
+    then the point (4,0,1) gets 1 added into it
+
+    Finally this is turned into a 1d array and then its normalized 
+    such that its independent of size of image or number of fixels of 
+    image
+    
+
+2.                  Texture extractions:
+
+a.  lbp = local_binary_pattern(gray, P=24, R=3, method='uniform')
+    we have greyscale image grey. Finding the LBP of that.
+    What is LBP? just take a pixel and the 8 pixels surrounding it.
+    if any pixel has intensity greater than our pixel, mark it 1 else 0.
+    Convert this binary 8 bit number to decimel...this is the LBP value 
+    of our pixel. Now a histogram is built for this image...which helps judge
+    texture.
+
+    A smooth texture will have most of its values 
+    in a few uniform patterns (like 0, 1).
+    A complex/rough texture will have a more spread-out histogram, 
+    with higher frequencies in non-uniform patterns.
+
+    for ex. 0000000000- flat region (smooth walls, sky)
+    000011111- edge(text, leaves)
+    01010101101 - high variation- rough (grass, rug)
+
+    p=24 is num of circularly symmetric neighbor points
+    R=3 is radius of circle used for classification
+    'uniform' LBP pattern is what is used for many real world
+    texture classification. Basically, if at most 2 transitions
+    (0-1 or 1-0) are there, then it will consider texture as smooth.
+    ex:
+    00000000 → 0 transitions → uniform
+    01111110 → 2 transitions (0→1→0) → uniform
+    01010100 → 6 transitions → non-uniform
+
+    Hence, since p=24 there will be total of 24 uniform patterns:
+    0000000000 or 11111111111
+    00000100000 or 0010000000 or 1111011111
+    0000110000 or 01100000 or 11111001111 
+    0001110000 and so on.
+    patterns 25 and 26 are for non uniform.
+    so total 26 lbp patterns will exist for any pixel.
+
+    SO BASICALLY, the histogram will have 26 columns. 
+    and there will be one histogram for each image. i.e.
+    each image's feature vector(for texture) will have 26 fields
+    for ex.
+    [0.45, 0.30, 0.10, ..., 0.00, 0.00, 0.15] so:
+    45% of the pixels had pattern 0 (flat area)
+    30% had pattern 1 (simple edge)
+    15% were non-uniform
+    
+    this is what is happening
+
+b.  lbp_hist, _ = np.histogram(lbp.ravel(), bins=np.arange(0, 27), range=(0, 26))
+    so far..we had lbp, which was a 2D array containing lbp value of each pixel
+
+    ravel() flattens it into 1D array for histogram creation
+
+    bins=np.arange(0, 27): Creates 26 bins (0 to 26 exclusive), 
+    which is typical for "uniform" LBP with P=24.
+
+    range=(0, 26): LBP values range from 0 to 25 
+    (uniform patterns), with 26 typically representing "non-uniform" patterns.
+
+    Result: A histogram lbp_hist of 26 elements showing 
+    how often each LBP pattern occurs.
+
+c. lbp_hist = lbp_hist.astype("float") / lbp_hist.sum()
+
+    This normalizes the histogram to make it scale-invariant
+    basically, if bin 1 has 20 pixels and total pixels are 120
+    then bin 1's value becomes 20/120
+
+    lbp_hist.astype("float") converts each bin's value to float and
+    / lbp_hist.sum() does normalization
+
+3.                  Shape extractions:
+
+a.  moments = cv2.moments(gray)
+    Moments are mathematical characteristics of the
+     image that describe its distribution of intensity.
+
+     for ex. first moment (m00) is area of shape(sum of pixel intensities)
+     first order moments (m10 and m01)- used to find centroid 
+     and so on and on.
+
+b.  hu_moments = cv2.HuMoments(moments).flatten()
+
+    This converts the regular moments into 7 Hu Invariant Moments,
+    which are: Scale invariant,***
+    Translation Invariant and ***
+    Rotation Invariant ****
+    (Designed by M.K. Hu)
+
+     There are 7 Hu moments being considered:
+     Hu[0] = η20 + η02
+    Describes the overall spread or variance
+    ex. big circle has more Hu[0] than small one
+
+    Hu[1] -> shape's orientation and axis of symmetry
+    ellipse has more Hu[1] than circle
+
+    Hu[2] -> Assymetric nature of a shape
+    leaning tower of pisa will have more Hu[2] 
+    than reular building
+    (depending on shot angle)
+
+    Hu[3] -> Measure of sharp edges
+    Start has more of Hu[3] than circle or square
+
+    Hu[4]-> another symmetricity metric
+    perfect hexagon has more of it than broken Star
+
+    Hu[5] -> mix of variance and Assymetric nature
+    good for things with tail/ branches, for ex. comets
+    or teardrop have high Hu[5]
+
+    Hu[6] ->Captures irregular asymmetries, 
+    especially rotation-invariant distortions
+    A bent banana shape would result in a 
+    higher Hu[6] than a symmetrical object
+
+c.  hu_moments = -np.sign(hu_moments) * np.log10(np.abs(hu_moments) + 1e-10)
+
+    Hu Moments often have values that are very small (like 1e-7, 1e-10, etc.).
+    Taking the log scale compresses them into a more manageable range.
+    The -np.sign(...) preserves the sign after taking the log
+
+    by adding a very tiny number (1e-10), you're making sure:
+    No value becomes exactly 0, so log doesn’t blow up
+
+
+
+4.                  Creation of final feature vector for one image:
+
+    feature_vector = np.hstack([hist, lbp_hist, hu_moments])
+    this is-
+    A single 1D array that summarizes color + texture + shape features of the image
+
+    Basically,
+    feature_vector = [
+        color_hist_values...,  # e.g., 512 bins
+        lbp_hist_values...,    # e.g., 27 bins
+        hu_moment_values...    # 7 bins
+    ]
+    This corresponds to one image
+
+
+
+
+
+
+
+
+
+
+
+
