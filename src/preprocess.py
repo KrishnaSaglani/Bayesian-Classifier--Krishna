@@ -40,7 +40,7 @@ def extract_features(data_dir):
             # Convert to grayscale
             gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
             
-            # Extract texture (LBP)
+            # Extract texture from local binary pattern function
             lbp = local_binary_pattern(gray, P=24, R=3, method='uniform')
             lbp_hist, _ = np.histogram(lbp.ravel(), bins=np.arange(0, 27), range=(0, 26))
             lbp_hist = lbp_hist.astype("float") / lbp_hist.sum()
