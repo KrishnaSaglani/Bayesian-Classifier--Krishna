@@ -6,18 +6,20 @@ import time
 import logging
 import pickle
 
-# Setup logging (file + console)
+# -------------------- Setup Logging -------------------- #
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s', handlers=[
     logging.FileHandler("train.log"),
     logging.StreamHandler()
 ])
 
-# Load dataset
+# -------------------- Load Dataset -------------------- #
 data = pd.read_csv('train_features.csv')
-X = data.iloc[:, :-1].values  # Features
-y = data.iloc[:, -1].values   # Labels
 
-# Class Merging
+# Split data into features (X) and labels (y)
+X = data.iloc[:, :-1].values
+y = data.iloc[:, -1].values
+
+# -------------------- Merge Similar Classes -------------------- #
 class_mapping = {
     "Cabbagered": "Cabbage", "Cabbagewhite": "Cabbage",
     "AppleBraeburn": "Apple", "AppleCore": "Apple", "AppleCrimsonSnow": "Apple",
@@ -32,74 +34,75 @@ class_mapping = {
 }
 y = np.array([class_mapping[label] if label in class_mapping else label for label in y])
 
-# Train-test split
+# -------------------- Split into Train/Test Sets -------------------- #
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 logging.info("Training started...")
 
-# Class priors P(y)
-class_priors = {}
-start_time = time.time()
+# -------------------- Calculate Class Priors -------------------- #
+def calculate_class_priors(labels):
+    priors = {}
+    total = len(labels)
+    for label in np.unique(labels):
+        priors[label] = np.sum(labels == label) / total
+    return priors
 
-for c in np.unique(y_train):
-    class_priors[c] = np.sum(y_train == c) / len(y_train)
-    logging.info(f"Class '{c}' prior: {class_priors[c]:.4f}")
+class_priors = calculate_class_priors(y_train)
+for label, prior in class_priors.items():
+    logging.info(f"Class '{label}' prior: {prior:.4f}")
 
-logging.info(f"Class priors calculated in {time.time() - start_time:.2f} seconds.\n")
+# -------------------- Calculate Mean and Variance for Each Class -------------------- #
+def calculate_means_and_variances(X, y):
+    means = {}
+    variances = {}
+    for label in np.unique(y):
+        class_data = X[y == label]
+        means[label] = np.mean(class_data, axis=0)
+        variances[label] = np.var(class_data, axis=0) + 1e-4  # Add small value to prevent division by zero
+    return means, variances
 
-# Means and variances (Per-Class Standardization)
-means = {}
-variances = {}
-start_time = time.time()
+means, variances = calculate_means_and_variances(X_train, y_train)
+for label in means:
+    logging.info(f"Class '{label}' - Mean: {means[label][:3]}... Variance: {variances[label][:3]}...")
 
-for c in np.unique(y_train):
-    X_c = X_train[np.where(y_train == c)]
-    means[c] = np.mean(X_c, axis=0)
-    variances[c] = np.var(X_c, axis=0) + 1e-4  # **Fix: Small variance correction**
-    
-    logging.info(f"Class '{c}' - Mean: {means[c][:3]}... Variance: {variances[c][:3]}...")  # Log first 3 features
-
-logging.info(f"Means & variances computed in {time.time() - start_time:.2f} seconds.\n")
-
-# Gaussian likelihood function
+# -------------------- Define Gaussian Likelihood -------------------- #
 def gaussian_likelihood(x, mean, var):
     exponent = np.exp(-((x - mean) ** 2) / (2 * var))
     return (1 / np.sqrt(2 * np.pi * var)) * exponent
 
-# Predict function
-def predict(X):
+# -------------------- Predict Function -------------------- #
+def predict(X, class_priors, means, variances, unique_classes):
     predictions = []
-    total_samples = X.shape[0]
+    total_samples = len(X)
 
     logging.info(f"Making predictions on {total_samples} test samples...")
-
     start_time = time.time()
-    
-    for idx, x in enumerate(X):
-        class_probs = {}
-        for c in np.unique(y_train):
-            prior = np.log(class_priors[c] + 1e-9)  # **Fix: Avoid log(0)**
-            likelihood = np.sum(np.log(gaussian_likelihood(x, means[c], variances[c]) + 1e-9))  # **Fix: Avoid log(0)**
-            class_probs[c] = prior + likelihood  # Log Posterior
-        
-        predictions.append(max(class_probs, key=class_probs.get))
-        
-        # Console logs every 100 samples
+
+    for idx, sample in enumerate(X):
+        class_probabilities = {}
+
+        for label in unique_classes:
+            prior = np.log(class_priors[label] + 1e-9)
+            likelihood = np.sum(np.log(gaussian_likelihood(sample, means[label], variances[label]) + 1e-9))
+            class_probabilities[label] = prior + likelihood
+
+        best_label = max(class_probabilities, key=class_probabilities.get)
+        predictions.append(best_label)
+
         if (idx + 1) % 100 == 0 or (idx + 1) == total_samples:
             logging.info(f"Predicted {idx + 1}/{total_samples} samples... ({(idx + 1) / total_samples * 100:.2f}%)")
-    
-    logging.info(f"Prediction completed in {time.time() - start_time:.2f} seconds.\n")
-    
+
+    logging.info(f"Prediction completed in {time.time() - start_time:.2f} seconds.")
     return np.array(predictions)
 
-# Predict and evaluate
-y_pred = predict(X_test)
+# -------------------- Run Prediction and Evaluate -------------------- #
+y_pred = predict(X_test, class_priors, means, variances, np.unique(y_train))
 
 accuracy = accuracy_score(y_test, y_pred)
 logging.info(f"Model Accuracy: {accuracy * 100:.2f}%")
 logging.info(f"\n{classification_report(y_test, y_pred, labels=sorted(np.unique(y_train)))}")
 
-# Save the model parameters to a file for later use in classification
+# -------------------- Save Model Parameters -------------------- #
 model_params = {
     'class_priors': class_priors,
     'means': means,
