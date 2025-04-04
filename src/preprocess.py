@@ -64,8 +64,8 @@ def extract_features(data_dir):
     # Save to CSV
     df = pd.DataFrame(features)
     df['label'] = labels
-    df.to_csv("features.csv", index=False)
+    df.to_csv("train_features.csv", index=False)
     print("Feature extraction complete. Saved to features.csv")
 
-# Run feature extraction
+# Run training feature extraction
 extract_features("fruits-360/Training")
