@@ -13,7 +13,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s', hand
 ])
 
 # Load dataset
-data = pd.read_csv('features.csv')
+data = pd.read_csv('train_features.csv')
 X = data.iloc[:, :-1].values  # Features
 y = data.iloc[:, -1].values   # Labels
 
@@ -53,9 +53,9 @@ variances = {}
 start_time = time.time()
 
 for c in np.unique(y_train):
-    X_c = X_train[y_train == c]
+    X_c = X_train[np.where(y_train == c)]
     means[c] = np.mean(X_c, axis=0)
-    variances[c] = np.var(X_c, axis=0) + 1e-4  # **Fix: Smaller Variance Correction**
+    variances[c] = np.var(X_c, axis=0) + 1e-4  # **Fix: Small variance correction**
     
     logging.info(f"Class '{c}' - Mean: {means[c][:3]}... Variance: {variances[c][:3]}...")  # Log first 3 features
 
@@ -97,7 +97,7 @@ y_pred = predict(X_test)
 
 accuracy = accuracy_score(y_test, y_pred)
 logging.info(f"Model Accuracy: {accuracy * 100:.2f}%")
-logging.info(f"\n{classification_report(y_test, y_pred)}")
+logging.info(f"\n{classification_report(y_test, y_pred, labels=sorted(np.unique(y_train)))}")
 
 # Save the model parameters to a file for later use in classification
 model_params = {
