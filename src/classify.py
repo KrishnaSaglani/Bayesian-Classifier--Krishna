@@ -18,8 +18,6 @@ def gaussian_likelihood(x, mean, var):
     return (1 / np.sqrt(2 * np.pi * var)) * exponent
 
 def classify_image(image_path):
-    x = extract_features_from_image(image_path)
-    class_probs = {}
 
     for c in unique_classes:
         prior = np.log(class_priors[c] + 1e-9)
