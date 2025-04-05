@@ -1,6 +1,7 @@
-Accuracy: 0.2961
-
-Classification Report:
+2025-04-06 04:44:44,640 - Loaded test data.
+2025-04-06 04:44:44,642 - Loaded model parameters from 'model_params.pkl'.
+2025-04-06 04:45:01,068 - Accuracy: 0.2961
+2025-04-06 04:45:01,068 - Classification Report:
                precision    recall  f1-score   support
 
         Apple       0.47      0.79      0.59      4443
@@ -81,3 +82,4 @@ Passion Fruit       0.00      0.00      0.00       332
      accuracy                           0.30     28863
     macro avg       0.08      0.24      0.11     28863
  weighted avg       0.15      0.30      0.19     28863
+
