@@ -4,69 +4,75 @@ import numpy as np
 import pandas as pd
 import logging
 from skimage.feature import local_binary_pattern
-import re
 
-def extract_features(data_dir, output_csv, log_file, class_mapping=None):
-    logging.basicConfig(filename=log_file, level=logging.INFO, format='%(asctime)s - %(message)s')
+# Initialize logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s')
 
-    features = []
+def get_image_paths(data_dir):
+    image_paths = []
     labels = []
-
-    total_images = sum([
-        len(os.listdir(os.path.join(data_dir, fruit_class)))
-        for fruit_class in os.listdir(data_dir)
-        if os.path.isdir(os.path.join(data_dir, fruit_class))
-    ])
-    processed_images = 0
-
-    logging.info(f"Started feature extraction from {data_dir}. Total images to process: {total_images}")
-
     for fruit_class in os.listdir(data_dir):
         class_path = os.path.join(data_dir, fruit_class)
         if not os.path.isdir(class_path):
             continue
-
-        # Apply class mapping if provided
-        merged_class = class_mapping.get(fruit_class, fruit_class) if class_mapping else fruit_class
-        logging.info(f"Processing class: {fruit_class} as {merged_class}")
-
         for img_name in os.listdir(class_path):
             img_path = os.path.join(class_path, img_name)
-            img = cv2.imread(img_path)
-            if img is None:
-                logging.warning(f"Skipping {img_name} due to read error.")
-                continue
+            image_paths.append(img_path)
+            labels.append(fruit_class)
+    return image_paths, labels
 
-            img = cv2.resize(img, (100, 100))
+def extract_color_histogram(img):
+    hist = cv2.calcHist([img], [0, 1, 2], None, [8, 8, 8], [0, 256, 0, 256, 0, 256])
+    hist = cv2.normalize(hist, hist).flatten()
+    return hist
 
-            # Color histogram
-            hist = cv2.calcHist([img], [0, 1, 2], None, [8, 8, 8], [0, 256, 0, 256, 0, 256])
-            hist = cv2.normalize(hist, hist).flatten()
+def extract_lbp_features(gray):
+    lbp = local_binary_pattern(gray, P=24, R=3, method='uniform')
+    lbp_hist, _ = np.histogram(lbp.ravel(), bins=np.arange(0, 27), range=(0, 26))
+    lbp_hist = lbp_hist.astype("float") / lbp_hist.sum()
+    return lbp_hist
 
-            # Grayscale + LBP
-            gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-            lbp = local_binary_pattern(gray, P=24, R=3, method='uniform')
-            lbp_hist, _ = np.histogram(lbp.ravel(), bins=np.arange(0, 27), range=(0, 26))
-            lbp_hist = lbp_hist.astype("float") / lbp_hist.sum()
+def extract_hu_moments(gray):
+    moments = cv2.moments(gray)
+    hu_moments = cv2.HuMoments(moments).flatten()
+    hu_moments = -np.sign(hu_moments) * np.log10(np.abs(hu_moments) + 1e-10)
+    return hu_moments
 
-            # Hu Moments
-            moments = cv2.moments(gray)
-            hu_moments = cv2.HuMoments(moments).flatten()
-            hu_moments = -np.sign(hu_moments) * np.log10(np.abs(hu_moments) + 1e-10)
+def extract_all_features(img):
+    img_resized = cv2.resize(img, (100, 100))
+    gray = cv2.cvtColor(img_resized, cv2.COLOR_BGR2GRAY)
+    color_hist = extract_color_histogram(img_resized)
+    lbp_features = extract_lbp_features(gray)
+    hu_moments = extract_hu_moments(gray)
+    return np.hstack([color_hist, lbp_features, hu_moments])
 
-            feature_vector = np.hstack([hist, lbp_hist, hu_moments])
+def extract_features(data_dir, output_csv, log_file, class_mapping=None):
+    logging.getLogger().addHandler(logging.FileHandler(log_file))
+    
+    image_paths, raw_labels = get_image_paths(data_dir)
+    features = []
+    final_labels = []
 
-            features.append(feature_vector)
-            labels.append(merged_class)
+    logging.info(f"Started feature extraction from {data_dir}. Total images: {len(image_paths)}")
 
-            processed_images += 1
-            if processed_images % 50 == 0:
-                logging.info(f"Processed {processed_images}/{total_images} images... ({(processed_images/total_images)*100:.2f}%)")
+    for idx, (path, original_label) in enumerate(zip(image_paths, raw_labels)):
+        label = class_mapping.get(original_label, original_label) if class_mapping else original_label
+        img = cv2.imread(path)
+        if img is None:
+            logging.warning(f"Could not read image: {path}, skipping.")
+            continue
+
+        feature_vector = extract_all_features(img)
+        features.append(feature_vector)
+        final_labels.append(label)
+
+        if (idx + 1) % 50 == 0 or (idx + 1) == len(image_paths):
+            logging.info(f"Processed {idx + 1}/{len(image_paths)} images ({(idx + 1)/len(image_paths)*100:.2f}%)")
 
     df = pd.DataFrame(features)
-    df['label'] = labels
+    df['label'] = final_labels
     df.to_csv(output_csv, index=False)
-    logging.info(f"Feature extraction complete. Saved to {output_csv}")
+    logging.info(f"Feature extraction complete. Saved to {output_csv}\n")
 
 if __name__ == "__main__":
     class_mapping = {
