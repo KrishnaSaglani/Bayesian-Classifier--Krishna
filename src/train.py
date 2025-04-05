@@ -19,21 +19,6 @@ data = pd.read_csv('train_features.csv')
 X = data.iloc[:, :-1].values
 y = data.iloc[:, -1].values
 
-# -------------------- Merge Similar Classes -------------------- #
-class_mapping = {
-    "Cabbagered": "Cabbage", "Cabbagewhite": "Cabbage",
-    "AppleBraeburn": "Apple", "AppleCore": "Apple", "AppleCrimsonSnow": "Apple",
-    "AppleGolden": "Apple", "AppleGrannySmith": "Apple", "ApplePinkLady": "Apple",
-    "AppleRed": "Apple", "AppleRedDelicious": "Apple", "AppleRedYellow": "Apple",
-    "AppleRotten": "Apple", "Applehit": "Apple", "Appleworm": "Apple",
-    "Avocadoripe": "Avocado",
-    "BananaLadyFinger": "Banana", "BananaRed": "Banana",
-    "Blackberriehalfrippen": "Blackberry", "Blackberrienotrippen": "Blackberry",
-    "CherryRainier": "Cherry", "CherryWaxBlack": "Cherry", "CherryWaxRed": "Cherry",
-    "CherryWaxYellow": "Cherry", "CherryWaxnotrippen": "Cherry"
-}
-y = np.array([class_mapping[label] if label in class_mapping else label for label in y])
-
 # -------------------- Split into Train/Test Sets -------------------- #
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
