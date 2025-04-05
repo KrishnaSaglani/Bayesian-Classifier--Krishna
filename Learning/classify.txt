@@ -12,10 +12,10 @@ The script begins by importing required libraries like numpy,
 A custom function named gaussian_probability 
 is defined to calculate the likelihood of each feature under a 
 normal (Gaussian) distribution. This function is used to determine
- how probable a given feature value is for a particular class, 
- given its mean and variance from training. 
- A small value (like 1e-6) is added to the variance 
- to avoid division by zero.
+how probable a given feature value is for a particular class, 
+given its mean and variance from training. 
+A small value (like 1e-6) is added to the variance 
+to avoid division by zero.
 
 3. Prediction Logic:
 The script loops through each test sample and 
