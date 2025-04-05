@@ -1,0 +1,115 @@
+2025-04-06 05:25:58,381 - Training started...
+2025-04-06 05:25:58,402 - Class 'Apple' prior: 0.4333
+2025-04-06 05:25:58,403 - Class 'Apricot' prior: 0.0161
+2025-04-06 05:25:58,403 - Class 'Avocado' prior: 0.0296
+2025-04-06 05:25:58,403 - Class 'Banana' prior: 0.0536
+2025-04-06 05:25:58,404 - Class 'Beans' prior: 0.0077
+2025-04-06 05:25:58,404 - Class 'Beetroot' prior: 0.0145
+2025-04-06 05:25:58,404 - Class 'Blackberry' prior: 0.0588
+2025-04-06 05:25:58,404 - Class 'Blueberry' prior: 0.0152
+2025-04-06 05:25:58,405 - Class 'Cabbage' prior: 0.0098
+2025-04-06 05:25:58,405 - Class 'Cactus fruit' prior: 0.0615
+2025-04-06 05:25:58,405 - Class 'Cantaloupe' prior: 0.0325
+2025-04-06 05:25:58,405 - Class 'Carambula' prior: 0.0160
+2025-04-06 05:25:58,406 - Class 'Carrot' prior: 0.0050
+2025-04-06 05:25:58,406 - Class 'Cauliflower' prior: 0.0232
+2025-04-06 05:25:58,406 - Class 'Cherimoya' prior: 0.0311
+2025-04-06 05:25:58,407 - Class 'Cherry' prior: 0.1340
+2025-04-06 05:25:58,408 - Class 'Chestnut' prior: 0.0148
+2025-04-06 05:25:58,416 - Class 'Clementine' prior: 0.0158
+2025-04-06 05:25:58,418 - Class 'Coconut' prior: 0.0155
+2025-04-06 05:25:58,421 - Class 'Corn' prior: 0.0121
+2025-04-06 05:25:58,650 - Making predictions on 6157 test samples...
+2025-04-06 05:25:58,735 - Predicted 100/6157 samples... (1.62%)
+2025-04-06 05:25:58,813 - Predicted 200/6157 samples... (3.25%)
+2025-04-06 05:25:58,882 - Predicted 300/6157 samples... (4.87%)
+2025-04-06 05:25:58,958 - Predicted 400/6157 samples... (6.50%)
+2025-04-06 05:25:59,034 - Predicted 500/6157 samples... (8.12%)
+2025-04-06 05:25:59,096 - Predicted 600/6157 samples... (9.75%)
+2025-04-06 05:25:59,158 - Predicted 700/6157 samples... (11.37%)
+2025-04-06 05:25:59,224 - Predicted 800/6157 samples... (12.99%)
+2025-04-06 05:25:59,291 - Predicted 900/6157 samples... (14.62%)
+2025-04-06 05:25:59,357 - Predicted 1000/6157 samples... (16.24%)
+2025-04-06 05:25:59,419 - Predicted 1100/6157 samples... (17.87%)
+2025-04-06 05:25:59,484 - Predicted 1200/6157 samples... (19.49%)
+2025-04-06 05:25:59,546 - Predicted 1300/6157 samples... (21.11%)
+2025-04-06 05:25:59,611 - Predicted 1400/6157 samples... (22.74%)
+2025-04-06 05:25:59,671 - Predicted 1500/6157 samples... (24.36%)
+2025-04-06 05:25:59,736 - Predicted 1600/6157 samples... (25.99%)
+2025-04-06 05:25:59,799 - Predicted 1700/6157 samples... (27.61%)
+2025-04-06 05:25:59,860 - Predicted 1800/6157 samples... (29.24%)
+2025-04-06 05:25:59,923 - Predicted 1900/6157 samples... (30.86%)
+2025-04-06 05:26:00,064 - Predicted 2000/6157 samples... (32.48%)
+2025-04-06 05:26:00,125 - Predicted 2100/6157 samples... (34.11%)
+2025-04-06 05:26:00,189 - Predicted 2200/6157 samples... (35.73%)
+2025-04-06 05:26:00,252 - Predicted 2300/6157 samples... (37.36%)
+2025-04-06 05:26:00,318 - Predicted 2400/6157 samples... (38.98%)
+2025-04-06 05:26:00,381 - Predicted 2500/6157 samples... (40.60%)
+2025-04-06 05:26:00,443 - Predicted 2600/6157 samples... (42.23%)
+2025-04-06 05:26:00,504 - Predicted 2700/6157 samples... (43.85%)
+2025-04-06 05:26:00,564 - Predicted 2800/6157 samples... (45.48%)
+2025-04-06 05:26:00,625 - Predicted 2900/6157 samples... (47.10%)
+2025-04-06 05:26:00,689 - Predicted 3000/6157 samples... (48.73%)
+2025-04-06 05:26:00,773 - Predicted 3100/6157 samples... (50.35%)
+2025-04-06 05:26:00,833 - Predicted 3200/6157 samples... (51.97%)
+2025-04-06 05:26:00,896 - Predicted 3300/6157 samples... (53.60%)
+2025-04-06 05:26:00,962 - Predicted 3400/6157 samples... (55.22%)
+2025-04-06 05:26:01,026 - Predicted 3500/6157 samples... (56.85%)
+2025-04-06 05:26:01,094 - Predicted 3600/6157 samples... (58.47%)
+2025-04-06 05:26:01,161 - Predicted 3700/6157 samples... (60.09%)
+2025-04-06 05:26:01,226 - Predicted 3800/6157 samples... (61.72%)
+2025-04-06 05:26:01,289 - Predicted 3900/6157 samples... (63.34%)
+2025-04-06 05:26:01,354 - Predicted 4000/6157 samples... (64.97%)
+2025-04-06 05:26:01,417 - Predicted 4100/6157 samples... (66.59%)
+2025-04-06 05:26:01,483 - Predicted 4200/6157 samples... (68.22%)
+2025-04-06 05:26:01,550 - Predicted 4300/6157 samples... (69.84%)
+2025-04-06 05:26:01,617 - Predicted 4400/6157 samples... (71.46%)
+2025-04-06 05:26:01,679 - Predicted 4500/6157 samples... (73.09%)
+2025-04-06 05:26:01,740 - Predicted 4600/6157 samples... (74.71%)
+2025-04-06 05:26:01,803 - Predicted 4700/6157 samples... (76.34%)
+2025-04-06 05:26:01,865 - Predicted 4800/6157 samples... (77.96%)
+2025-04-06 05:26:01,931 - Predicted 4900/6157 samples... (79.58%)
+2025-04-06 05:26:01,998 - Predicted 5000/6157 samples... (81.21%)
+2025-04-06 05:26:02,066 - Predicted 5100/6157 samples... (82.83%)
+2025-04-06 05:26:02,128 - Predicted 5200/6157 samples... (84.46%)
+2025-04-06 05:26:02,190 - Predicted 5300/6157 samples... (86.08%)
+2025-04-06 05:26:02,254 - Predicted 5400/6157 samples... (87.71%)
+2025-04-06 05:26:02,322 - Predicted 5500/6157 samples... (89.33%)
+2025-04-06 05:26:02,403 - Predicted 5600/6157 samples... (90.95%)
+2025-04-06 05:26:02,478 - Predicted 5700/6157 samples... (92.58%)
+2025-04-06 05:26:02,552 - Predicted 5800/6157 samples... (94.20%)
+2025-04-06 05:26:02,620 - Predicted 5900/6157 samples... (95.83%)
+2025-04-06 05:26:02,681 - Predicted 6000/6157 samples... (97.45%)
+2025-04-06 05:26:02,749 - Predicted 6100/6157 samples... (99.07%)
+2025-04-06 05:26:02,785 - Predicted 6157/6157 samples... (100.00%)
+2025-04-06 05:26:02,786 - Prediction completed in 4.14 seconds.
+2025-04-06 05:26:02,795 - Model Accuracy: 83.77%
+2025-04-06 05:26:02,838 - 
+              precision    recall  f1-score   support
+
+       Apple       0.99      0.77      0.87      2689
+     Apricot       0.83      1.00      0.90        95
+     Avocado       0.92      1.00      0.96       189
+      Banana       0.81      0.79      0.80       344
+       Beans       0.88      1.00      0.94        44
+    Beetroot       0.86      0.96      0.90        93
+  Blackberry       0.78      1.00      0.87       353
+   Blueberry       1.00      1.00      1.00        88
+     Cabbage       0.98      1.00      0.99        51
+Cactus fruit       0.97      0.73      0.83       387
+  Cantaloupe       0.98      1.00      0.99       184
+   Carambula       0.95      1.00      0.97        95
+      Carrot       0.65      1.00      0.79        28
+ Cauliflower       0.98      1.00      0.99       131
+   Cherimoya       0.77      1.00      0.87       206
+      Cherry       0.80      0.74      0.77       819
+    Chestnut       0.17      1.00      0.30        85
+  Clementine       1.00      1.00      1.00       101
+     Coconut       1.00      1.00      1.00       109
+        Corn       0.40      1.00      0.57        66
+
+    accuracy                           0.84      6157
+   macro avg       0.84      0.95      0.87      6157
+weighted avg       0.91      0.84      0.86      6157
+
+2025-04-06 05:26:02,854 - Model parameters as well as Validation Accuracy saved to 'model/model_params.pkl'

@@ -1,5 +1,4 @@
-# model_params.pkl  and train.log are stored in a 
-# separate folder called model in same directory
+# src/train.py
 
 import pandas as pd
 import numpy as np
@@ -10,102 +9,88 @@ import logging
 import pickle
 import os
 
-# -------------------- Setup Directories -------------------- #
-model_dir = "model"
-os.makedirs(model_dir, exist_ok=True)
+def train():
+    os.makedirs("model", exist_ok=True)
 
-# -------------------- Setup Logging -------------------- #
-log_file_path = os.path.join(model_dir, "train.log")
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s', handlers=[
-    logging.FileHandler(log_file_path),
-    logging.StreamHandler()
-])
+    logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s', handlers=[
+        logging.FileHandler("model/train.log"),
+        logging.StreamHandler()
+    ])
 
-# -------------------- Load Dataset -------------------- #
-data = pd.read_csv('train_features.csv')
+    data = pd.read_csv('train_features.csv')
+    X = data.iloc[:, :-1].values
+    y = data.iloc[:, -1].values
 
-# Split data into features (X) and labels (y)
-X = data.iloc[:, :-1].values
-y = data.iloc[:, -1].values
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    logging.info("Training started...")
 
-# -------------------- Split into Train/Test Sets -------------------- #
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    def calculate_class_priors(labels):
+        priors = {}
+        total = len(labels)
+        for label in np.unique(labels):
+            priors[label] = np.sum(labels == label) / total
+        return priors
+    
+    class_priors = calculate_class_priors(y_train)
+    for label, prior in class_priors.items():
+        logging.info(f"Class '{label}' prior: {prior:.4f}")
 
-logging.info("Training started...")
 
-# -------------------- Calculate Class Priors -------------------- #
-def calculate_class_priors(labels):
-    priors = {}
-    total = len(labels)
-    for label in np.unique(labels):
-        priors[label] = np.sum(labels == label) / total
-    return priors
+    def calculate_means_and_variances(X, y):
+        means = {}
+        variances = {}
+        for label in np.unique(y):
+            class_data = X[y == label]
+            means[label] = np.mean(class_data, axis=0)
+            variances[label] = np.var(class_data, axis=0) + 1e-4
+        return means, variances
 
-class_priors = calculate_class_priors(y_train)
-for label, prior in class_priors.items():
-    logging.info(f"Class '{label}' prior: {prior:.4f}")
+    means, variances = calculate_means_and_variances(X_train, y_train)
 
-# -------------------- Calculate Mean and Variance for Each Class -------------------- #
-def calculate_means_and_variances(X, y):
-    means = {}
-    variances = {}
-    for label in np.unique(y):
-        class_data = X[y == label]
-        means[label] = np.mean(class_data, axis=0)
-        variances[label] = np.var(class_data, axis=0) + 1e-4  # Add small value to prevent division by zero
-    return means, variances
+    def gaussian_likelihood(x, mean, var):
+        exponent = np.exp(-((x - mean) ** 2) / (2 * var))
+        return (1 / np.sqrt(2 * np.pi * var)) * exponent
 
-means, variances = calculate_means_and_variances(X_train, y_train)
-for label in means:
-    logging.info(f"Class '{label}' - Mean: {means[label][:3]}... Variance: {variances[label][:3]}...")
+    def predict(X, class_priors, means, variances, unique_classes):
+        predictions = []
+        total_samples = len(X)
+        logging.info(f"Making predictions on {total_samples} test samples...")
+        start_time = time.time()
 
-# -------------------- Define Gaussian Likelihood -------------------- #
-def gaussian_likelihood(x, mean, var):
-    exponent = np.exp(-((x - mean) ** 2) / (2 * var))
-    return (1 / np.sqrt(2 * np.pi * var)) * exponent
+        for idx, sample in enumerate(X):
+            class_probabilities = {}
+            for label in unique_classes:
+                prior = np.log(class_priors[label] + 1e-9)
+                likelihood = np.sum(np.log(gaussian_likelihood(sample, means[label], variances[label]) + 1e-9))
+                class_probabilities[label] = prior + likelihood
 
-# -------------------- Predict Function -------------------- #
-def predict(X, class_priors, means, variances, unique_classes):
-    predictions = []
-    total_samples = len(X)
+            best_label = max(class_probabilities, key=class_probabilities.get)
+            predictions.append(best_label)
 
-    logging.info(f"Making predictions on {total_samples} test samples...")
-    start_time = time.time()
+            if (idx + 1) % 100 == 0 or (idx + 1) == total_samples:
+                logging.info(f"Predicted {idx + 1}/{total_samples} samples... ({(idx + 1) / total_samples * 100:.2f}%)")
 
-    for idx, sample in enumerate(X):
-        class_probabilities = {}
 
-        for label in unique_classes:
-            prior = np.log(class_priors[label] + 1e-9)
-            likelihood = np.sum(np.log(gaussian_likelihood(sample, means[label], variances[label]) + 1e-9))
-            class_probabilities[label] = prior + likelihood
+        logging.info(f"Prediction completed in {time.time() - start_time:.2f} seconds.")
+        return np.array(predictions)
 
-        best_label = max(class_probabilities, key=class_probabilities.get)
-        predictions.append(best_label)
+    y_pred = predict(X_test, class_priors, means, variances, np.unique(y_train))
 
-        if (idx + 1) % 100 == 0 or (idx + 1) == total_samples:
-            logging.info(f"Predicted {idx + 1}/{total_samples} samples... ({(idx + 1) / total_samples * 100:.2f}%)")
+    accuracy = accuracy_score(y_test, y_pred)
+    logging.info(f"Model Accuracy: {accuracy * 100:.2f}%")
+    logging.info(f"\n{classification_report(y_test, y_pred)}")
 
-    logging.info(f"Prediction completed in {time.time() - start_time:.2f} seconds.")
-    return np.array(predictions)
+    model_params = {
+        'class_priors': class_priors,
+        'means': means,
+        'variances': variances,
+        'unique_classes': np.unique(y_train)
+    }
 
-# -------------------- Run Prediction and Evaluate -------------------- #
-y_pred = predict(X_test, class_priors, means, variances, np.unique(y_train))
+    with open('model/model_params.pkl', 'wb') as f:
+        pickle.dump(model_params, f)
 
-accuracy = accuracy_score(y_test, y_pred)
-logging.info(f"Model Accuracy: {accuracy * 100:.2f}%")
-logging.info(f"\n{classification_report(y_test, y_pred, labels=sorted(np.unique(y_train)))}")
+    logging.info("Model parameters saved to 'model/model_params.pkl'")
 
-# -------------------- Save Model Parameters -------------------- #
-model_params = {
-    'class_priors': class_priors,
-    'means': means,
-    'variances': variances,
-    'unique_classes': np.unique(y_train)
-}
-
-model_file_path = os.path.join(model_dir, 'model_params.pkl')
-with open(model_file_path, 'wb') as f:
-    pickle.dump(model_params, f)
-
-logging.info(f"Model parameters saved to '{model_file_path}'")
+if __name__ == "__main__":
+    train()
