@@ -1,0 +1,41 @@
+1. Loading the Data and Model:
+The script begins by importing required libraries like numpy,
+ pandas, and visualization tools like matplotlib and seaborn.
+  Then it loads the trained model parameters 
+  (means, variances, and priors) from the pickle 
+  file saved during training. It also loads the test 
+  dataset (test_features.csv), which already contains 
+  extracted features for each fruit image, so there's no 
+  need to extract them again here.
+
+2. Gaussian Probability Function:
+A custom function named gaussian_probability 
+is defined to calculate the likelihood of each feature under a 
+normal (Gaussian) distribution. This function is used to determine
+ how probable a given feature value is for a particular class, 
+ given its mean and variance from training. 
+ A small value (like 1e-6) is added to the variance 
+ to avoid division by zero.
+
+3. Prediction Logic:
+The script loops through each test sample and 
+calculates the log-probability of that sample belonging 
+to each class using Naive Bayes assumptions (features are 
+independent). For each class, it sums the log-probabilities 
+of the features and adds the log of the prior probability. 
+The class with the highest total score is selected as the 
+predicted label.
+
+4. Evaluation and Confusion Matrix:
+After predicting all labels, it compares them with 
+actual labels from the test dataset to calculate accuracy. 
+It then creates a confusion matrix to show how well the model
+ performed across all classes and visualizes it using Seaborn’s 
+ heatmap. This helps to quickly identify which fruits are getting 
+ misclassified.
+
+5. Saving Results:
+Finally, the script saves the predictions (actual vs predicted) 
+and the final accuracy into a classification_results.txt file. 
+This acts as a log of how the classifier performed, useful for 
+reviewing or comparing with future model improvements.
