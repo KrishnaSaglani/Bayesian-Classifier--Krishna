@@ -1,3 +1,6 @@
+# To be run whenever new data has been loaded,
+# on all the net training and testing data now available
+
 import os
 import cv2
 import numpy as np
