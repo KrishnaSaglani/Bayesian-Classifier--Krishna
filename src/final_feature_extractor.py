@@ -127,18 +127,18 @@ def extract_features(data_dir, output_csv, log_file):
 
 
 if __name__ == "__main__":
-    # Training set
-    os.makedirs("features", exist_ok=True)
 
-    # extract_features(
-    #     data_dir="fruits-360/Training",
-    #     output_csv="features/train_features.csv",
-    #     log_file="features/extract_train_features.log"
-    # )
+    os.makedirs("features", exist_ok=True)
+    # Training set
+    extract_features(
+        data_dir="fruits-360/Training",
+        output_csv="features/train_features.csv",
+        log_file="features/extract_train_features.log"
+    )
     
     # Test set
-    extract_features(
-        data_dir="fruits-360/Test",
-        output_csv="features/test_features.csv",
-        log_file="features/extract_test_features.log"
-    )
+    # extract_features(
+    #     data_dir="fruits-360/Test",
+    #     output_csv="features/test_features.csv",
+    #     log_file="features/extract_test_features.log"
+    # )
