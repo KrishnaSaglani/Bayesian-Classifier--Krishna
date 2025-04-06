@@ -12,8 +12,16 @@ import seaborn as sns
 def classify():
     os.makedirs("results1", exist_ok=True)
 
-    logging.basicConfig(filename="results1/classification.log", level=logging.INFO,
-                        format='%(asctime)s - %(message)s')
+    # Set up custom logger
+    logger = logging.getLogger("FruitClassifier")
+    logger.setLevel(logging.INFO)
+
+    # Avoid adding duplicate handlers on repeated runs
+    if not logger.handlers:
+        file_handler = logging.FileHandler("results1/classification.log")
+        formatter = logging.Formatter('%(asctime)s - %(message)s')
+        file_handler.setFormatter(formatter)
+        logger.addHandler(file_handler)
 
     def load_data(csv_file):
         df = pd.read_csv(csv_file)
@@ -37,10 +45,10 @@ def classify():
             predictions.append(max(class_probs, key=class_probs.get))
         return predictions
 
-    X_test, y_test = load_data("test_features.csv")
-    logging.info("Loaded test data.")
+    X_test, y_test = load_data("features/test_features.csv")
+    logger.info("Loaded test data.")
 
-    with open("model/model_params.pkl", "rb") as f:
+    with open("model/model_parameters.pkl", "rb") as f:
         model_params = pickle.load(f)
 
     class_priors = model_params['class_priors']
@@ -51,15 +59,15 @@ def classify():
     y_pred = predict(X_test, class_priors, means, variances, unique_classes)
 
     acc = accuracy_score(y_test, y_pred)
-    report = classification_report(y_test, y_pred, zero_division=0)  # <-- fixed warning
+    report = classification_report(y_test, y_pred, zero_division=0)
     cm = confusion_matrix(y_test, y_pred, labels=sorted(unique_classes))
 
     print(f"Accuracy: {acc:.4f}")
     print("Classification Report:")
     print(report)
 
-    logging.info(f"Accuracy: {acc:.4f}")
-    logging.info("Classification Report:\n" + report)
+    logger.info(f"Accuracy: {acc:.4f}")
+    logger.info("Classification Report:\n" + report)
 
     with open("results1/results.txt", "w") as f:
         f.write(f"Accuracy: {acc:.4f}\n\n")

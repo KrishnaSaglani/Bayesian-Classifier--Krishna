@@ -1,0 +1,2 @@
+1. calculate_class_priors(labels)
+

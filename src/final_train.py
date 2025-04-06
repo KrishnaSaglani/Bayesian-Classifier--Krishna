@@ -17,7 +17,7 @@ def train():
         logging.StreamHandler()
     ])
 
-    data = pd.read_csv('train_features.csv')
+    data = pd.read_csv('features/train_features.csv')
     X = data.iloc[:, :-1].values
     y = data.iloc[:, -1].values
 
@@ -87,10 +87,10 @@ def train():
         'unique_classes': np.unique(y_train)
     }
 
-    with open('model/model_params.pkl', 'wb') as f:
+    with open('model/model_parameters.pkl', 'wb') as f:
         pickle.dump(model_params, f)
 
-    logging.info("Model parameters saved to 'model/model_params.pkl'")
+    logging.info("Model parameters saved to 'model/model_parameters.pkl'")
 
 if __name__ == "__main__":
     train()

@@ -1,0 +1,748 @@
+2025-04-06 06:05:14,144 - Started feature extraction from fruits-360/Test. Total images to process: 28863
+2025-04-06 06:05:14,144 - Processing class: Apple 10 -> Apple
+2025-04-06 06:05:14,414 - Processed 50/28863 images (0.17%)
+2025-04-06 06:05:14,691 - Processed 100/28863 images (0.35%)
+2025-04-06 06:05:14,965 - Processed 150/28863 images (0.52%)
+2025-04-06 06:05:15,242 - Processed 200/28863 images (0.69%)
+2025-04-06 06:05:15,421 - Processing class: Apple 12 -> Apple
+2025-04-06 06:05:15,531 - Processed 250/28863 images (0.87%)
+2025-04-06 06:05:15,817 - Processed 300/28863 images (1.04%)
+2025-04-06 06:05:16,101 - Processed 350/28863 images (1.21%)
+2025-04-06 06:05:16,294 - Processing class: Apple 13 -> Apple
+2025-04-06 06:05:16,377 - Processed 400/28863 images (1.39%)
+2025-04-06 06:05:16,648 - Processed 450/28863 images (1.56%)
+2025-04-06 06:05:16,972 - Processed 500/28863 images (1.73%)
+2025-04-06 06:05:17,258 - Processed 550/28863 images (1.91%)
+2025-04-06 06:05:17,548 - Processed 600/28863 images (2.08%)
+2025-04-06 06:05:17,659 - Processing class: Apple 14 -> Apple
+2025-04-06 06:05:17,830 - Processed 650/28863 images (2.25%)
+2025-04-06 06:05:18,108 - Processed 700/28863 images (2.43%)
+2025-04-06 06:05:18,381 - Processed 750/28863 images (2.60%)
+2025-04-06 06:05:18,514 - Processing class: Apple 17 -> Apple
+2025-04-06 06:05:18,662 - Processed 800/28863 images (2.77%)
+2025-04-06 06:05:19,052 - Processed 850/28863 images (2.94%)
+2025-04-06 06:05:19,370 - Processed 900/28863 images (3.12%)
+2025-04-06 06:05:19,652 - Processed 950/28863 images (3.29%)
+2025-04-06 06:05:19,787 - Processing class: Apple 19 -> Apple
+2025-04-06 06:05:19,926 - Processed 1000/28863 images (3.46%)
+2025-04-06 06:05:20,208 - Processed 1050/28863 images (3.64%)
+2025-04-06 06:05:20,498 - Processed 1100/28863 images (3.81%)
+2025-04-06 06:05:20,785 - Processed 1150/28863 images (3.98%)
+2025-04-06 06:05:21,060 - Processed 1200/28863 images (4.16%)
+2025-04-06 06:05:21,154 - Processing class: Apple 6 -> Apple
+2025-04-06 06:05:21,350 - Processed 1250/28863 images (4.33%)
+2025-04-06 06:05:21,630 - Processed 1300/28863 images (4.50%)
+2025-04-06 06:05:21,905 - Processed 1350/28863 images (4.68%)
+2025-04-06 06:05:22,035 - Processing class: Apple 9 -> Apple
+2025-04-06 06:05:22,187 - Processed 1400/28863 images (4.85%)
+2025-04-06 06:05:22,470 - Processed 1450/28863 images (5.02%)
+2025-04-06 06:05:22,753 - Processed 1500/28863 images (5.20%)
+2025-04-06 06:05:23,075 - Processed 1550/28863 images (5.37%)
+2025-04-06 06:05:23,351 - Processed 1600/28863 images (5.54%)
+2025-04-06 06:05:23,375 - Processing class: Apple Braeburn 1 -> Apple
+2025-04-06 06:05:23,656 - Processed 1650/28863 images (5.72%)
+2025-04-06 06:05:23,946 - Processed 1700/28863 images (5.89%)
+2025-04-06 06:05:24,220 - Processed 1750/28863 images (6.06%)
+2025-04-06 06:05:24,323 - Processing class: Apple Core 1 -> Apple
+2025-04-06 06:05:24,813 - Processed 1800/28863 images (6.24%)
+2025-04-06 06:05:25,511 - Processing class: Apple Crimson Snow 1 -> Apple
+2025-04-06 06:05:25,574 - Processed 1850/28863 images (6.41%)
+2025-04-06 06:05:26,328 - Processed 1900/28863 images (6.58%)
+2025-04-06 06:05:27,120 - Processed 1950/28863 images (6.76%)
+2025-04-06 06:05:27,772 - Processing class: Apple Golden 1 -> Apple
+2025-04-06 06:05:27,866 - Processed 2000/28863 images (6.93%)
+2025-04-06 06:05:28,608 - Processed 2050/28863 images (7.10%)
+2025-04-06 06:05:29,369 - Processed 2100/28863 images (7.28%)
+2025-04-06 06:05:30,116 - Processed 2150/28863 images (7.45%)
+2025-04-06 06:05:30,179 - Processing class: Apple Golden 2 -> Apple
+2025-04-06 06:05:30,872 - Processed 2200/28863 images (7.62%)
+2025-04-06 06:05:31,620 - Processed 2250/28863 images (7.80%)
+2025-04-06 06:05:32,371 - Processed 2300/28863 images (7.97%)
+2025-04-06 06:05:32,640 - Processing class: Apple Golden 3 -> Apple
+2025-04-06 06:05:33,121 - Processed 2350/28863 images (8.14%)
+2025-04-06 06:05:33,873 - Processed 2400/28863 images (8.32%)
+2025-04-06 06:05:34,622 - Processed 2450/28863 images (8.49%)
+2025-04-06 06:05:35,060 - Processing class: Apple Granny Smith 1 -> Apple
+2025-04-06 06:05:35,394 - Processed 2500/28863 images (8.66%)
+2025-04-06 06:05:36,167 - Processed 2550/28863 images (8.83%)
+2025-04-06 06:05:36,945 - Processed 2600/28863 images (9.01%)
+2025-04-06 06:05:37,602 - Processing class: Apple hit 1 -> Apple
+2025-04-06 06:05:37,711 - Processed 2650/28863 images (9.18%)
+2025-04-06 06:05:38,477 - Processed 2700/28863 images (9.35%)
+2025-04-06 06:05:39,229 - Processed 2750/28863 images (9.53%)
+2025-04-06 06:05:39,973 - Processed 2800/28863 images (9.70%)
+2025-04-06 06:05:40,739 - Processed 2850/28863 images (9.87%)
+2025-04-06 06:05:41,156 - Processing class: Apple Pink Lady 1 -> Apple
+2025-04-06 06:05:41,524 - Processed 2900/28863 images (10.05%)
+2025-04-06 06:05:42,355 - Processed 2950/28863 images (10.22%)
+2025-04-06 06:05:43,109 - Processed 3000/28863 images (10.39%)
+2025-04-06 06:05:43,549 - Processing class: Apple Red 1 -> Apple
+2025-04-06 06:05:43,871 - Processed 3050/28863 images (10.57%)
+2025-04-06 06:05:44,641 - Processed 3100/28863 images (10.74%)
+2025-04-06 06:05:45,419 - Processed 3150/28863 images (10.91%)
+2025-04-06 06:05:46,062 - Processing class: Apple Red 2 -> Apple
+2025-04-06 06:05:46,171 - Processed 3200/28863 images (11.09%)
+2025-04-06 06:05:46,966 - Processed 3250/28863 images (11.26%)
+2025-04-06 06:05:47,717 - Processed 3300/28863 images (11.43%)
+2025-04-06 06:05:48,476 - Processed 3350/28863 images (11.61%)
+2025-04-06 06:05:48,584 - Processing class: Apple Red 3 -> Apple
+2025-04-06 06:05:49,230 - Processed 3400/28863 images (11.78%)
+2025-04-06 06:05:49,979 - Processed 3450/28863 images (11.95%)
+2025-04-06 06:05:50,734 - Processed 3500/28863 images (12.13%)
+2025-04-06 06:05:50,749 - Processing class: Apple Red Delicious 1 -> Apple
+2025-04-06 06:05:51,498 - Processed 3550/28863 images (12.30%)
+2025-04-06 06:05:52,268 - Processed 3600/28863 images (12.47%)
+2025-04-06 06:05:53,020 - Processed 3650/28863 images (12.65%)
+2025-04-06 06:05:53,277 - Processing class: Apple Red Yellow 1 -> Apple
+2025-04-06 06:05:53,762 - Processed 3700/28863 images (12.82%)
+2025-04-06 06:05:54,506 - Processed 3750/28863 images (12.99%)
+2025-04-06 06:05:55,262 - Processed 3800/28863 images (13.17%)
+2025-04-06 06:05:55,875 - Processing class: Apple Red Yellow 2 -> Apple
+2025-04-06 06:05:56,168 - Processed 3850/28863 images (13.34%)
+2025-04-06 06:05:56,929 - Processed 3900/28863 images (13.51%)
+2025-04-06 06:05:57,686 - Processed 3950/28863 images (13.69%)
+2025-04-06 06:05:58,479 - Processed 4000/28863 images (13.86%)
+2025-04-06 06:05:59,272 - Processed 4050/28863 images (14.03%)
+2025-04-06 06:05:59,272 - Processing class: Apple Rotten 1 -> Apple
+2025-04-06 06:06:00,036 - Processed 4100/28863 images (14.21%)
+2025-04-06 06:06:00,810 - Processed 4150/28863 images (14.38%)
+2025-04-06 06:06:01,593 - Processed 4200/28863 images (14.55%)
+2025-04-06 06:06:01,782 - Processing class: Apple worm 1 -> Apple
+2025-04-06 06:06:02,375 - Processed 4250/28863 images (14.72%)
+2025-04-06 06:06:03,143 - Processed 4300/28863 images (14.90%)
+2025-04-06 06:06:03,911 - Processed 4350/28863 images (15.07%)
+2025-04-06 06:06:04,677 - Processed 4400/28863 images (15.24%)
+2025-04-06 06:06:05,356 - Processing class: Apricot 1 -> Apricot
+2025-04-06 06:06:05,467 - Processed 4450/28863 images (15.42%)
+2025-04-06 06:06:06,225 - Processed 4500/28863 images (15.59%)
+2025-04-06 06:06:06,989 - Processed 4550/28863 images (15.76%)
+2025-04-06 06:06:07,745 - Processed 4600/28863 images (15.94%)
+2025-04-06 06:06:07,857 - Processing class: Avocado 1 -> Avocado
+2025-04-06 06:06:08,526 - Processed 4650/28863 images (16.11%)
+2025-04-06 06:06:09,295 - Processed 4700/28863 images (16.28%)
+2025-04-06 06:06:10,051 - Processed 4750/28863 images (16.46%)
+2025-04-06 06:06:10,052 - Processing class: Avocado ripe 1 -> Avocado
+2025-04-06 06:06:10,842 - Processed 4800/28863 images (16.63%)
+2025-04-06 06:06:11,612 - Processed 4850/28863 images (16.80%)
+2025-04-06 06:06:12,393 - Processed 4900/28863 images (16.98%)
+2025-04-06 06:06:12,695 - Processing class: Banana 1 -> Banana
+2025-04-06 06:06:13,211 - Processed 4950/28863 images (17.15%)
+2025-04-06 06:06:13,989 - Processed 5000/28863 images (17.32%)
+2025-04-06 06:06:14,753 - Processed 5050/28863 images (17.50%)
+2025-04-06 06:06:15,228 - Processing class: Banana 3 -> Banana
+2025-04-06 06:06:15,504 - Processed 5100/28863 images (17.67%)
+2025-04-06 06:06:16,271 - Processed 5150/28863 images (17.84%)
+2025-04-06 06:06:16,409 - Processing class: Banana Lady Finger 1 -> Banana
+2025-04-06 06:06:17,042 - Processed 5200/28863 images (18.02%)
+2025-04-06 06:06:17,811 - Processed 5250/28863 images (18.19%)
+2025-04-06 06:06:18,577 - Processed 5300/28863 images (18.36%)
+2025-04-06 06:06:18,743 - Processing class: Banana Red 1 -> Banana
+2025-04-06 06:06:19,324 - Processed 5350/28863 images (18.54%)
+2025-04-06 06:06:20,084 - Processed 5400/28863 images (18.71%)
+2025-04-06 06:06:20,836 - Processed 5450/28863 images (18.88%)
+2025-04-06 06:06:21,245 - Processing class: Beans 1 -> Beans
+2025-04-06 06:06:21,590 - Processed 5500/28863 images (19.06%)
+2025-04-06 06:06:22,412 - Processed 5550/28863 images (19.23%)
+2025-04-06 06:06:22,475 - Processing class: Beetroot 1 -> Beetroot
+2025-04-06 06:06:23,188 - Processed 5600/28863 images (19.40%)
+2025-04-06 06:06:23,926 - Processed 5650/28863 images (19.58%)
+2025-04-06 06:06:24,700 - Processed 5700/28863 images (19.75%)
+2025-04-06 06:06:24,766 - Processing class: Blackberrie 1 -> Blackberry
+2025-04-06 06:06:25,483 - Processed 5750/28863 images (19.92%)
+2025-04-06 06:06:26,237 - Processed 5800/28863 images (20.09%)
+2025-04-06 06:06:27,018 - Processed 5850/28863 images (20.27%)
+2025-04-06 06:06:27,083 - Processing class: Blackberrie 2 -> Blackberry
+2025-04-06 06:06:27,773 - Processed 5900/28863 images (20.44%)
+2025-04-06 06:06:28,233 - Processing class: Blackberrie half rippen 1 -> Blackberry
+2025-04-06 06:06:28,559 - Processed 5950/28863 images (20.61%)
+2025-04-06 06:06:29,320 - Processed 6000/28863 images (20.79%)
+2025-04-06 06:06:30,071 - Processed 6050/28863 images (20.96%)
+2025-04-06 06:06:30,531 - Processing class: Blackberrie not rippen 1 -> Blackberry
+2025-04-06 06:06:30,908 - Processed 6100/28863 images (21.13%)
+2025-04-06 06:06:31,721 - Processed 6150/28863 images (21.31%)
+2025-04-06 06:06:32,563 - Processed 6200/28863 images (21.48%)
+2025-04-06 06:06:33,340 - Processed 6250/28863 images (21.65%)
+2025-04-06 06:06:34,114 - Processed 6300/28863 images (21.83%)
+2025-04-06 06:06:34,176 - Processing class: Blueberry 1 -> Blueberry
+2025-04-06 06:06:34,900 - Processed 6350/28863 images (22.00%)
+2025-04-06 06:06:35,664 - Processed 6400/28863 images (22.17%)
+2025-04-06 06:06:36,421 - Processed 6450/28863 images (22.35%)
+2025-04-06 06:06:36,540 - Processing class: Cabbage red 1 -> Cabbage
+2025-04-06 06:06:37,173 - Processed 6500/28863 images (22.52%)
+2025-04-06 06:06:37,277 - Processing class: Cabbage white 1 -> Cabbage
+2025-04-06 06:06:37,915 - Processed 6550/28863 images (22.69%)
+2025-04-06 06:06:37,977 - Processing class: Cactus fruit 1 -> Cactus fruit
+2025-04-06 06:06:38,663 - Processed 6600/28863 images (22.87%)
+2025-04-06 06:06:39,414 - Processed 6650/28863 images (23.04%)
+2025-04-06 06:06:40,173 - Processed 6700/28863 images (23.21%)
+2025-04-06 06:06:40,476 - Processing class: Cactus fruit green 1 -> Cactus fruit
+2025-04-06 06:06:40,929 - Processed 6750/28863 images (23.39%)
+2025-04-06 06:06:41,709 - Processed 6800/28863 images (23.56%)
+2025-04-06 06:06:42,521 - Processed 6850/28863 images (23.73%)
+2025-04-06 06:06:43,284 - Processed 6900/28863 images (23.91%)
+2025-04-06 06:06:44,098 - Processed 6950/28863 images (24.08%)
+2025-04-06 06:06:44,115 - Processing class: Cactus fruit red 1 -> Cactus fruit
+2025-04-06 06:06:44,857 - Processed 7000/28863 images (24.25%)
+2025-04-06 06:06:45,621 - Processed 7050/28863 images (24.43%)
+2025-04-06 06:06:46,383 - Processed 7100/28863 images (24.60%)
+2025-04-06 06:06:47,150 - Processed 7150/28863 images (24.77%)
+2025-04-06 06:06:47,744 - Processing class: Cantaloupe 1 -> Cantaloupe
+2025-04-06 06:06:47,931 - Processed 7200/28863 images (24.95%)
+2025-04-06 06:06:48,705 - Processed 7250/28863 images (25.12%)
+2025-04-06 06:06:49,468 - Processed 7300/28863 images (25.29%)
+2025-04-06 06:06:50,250 - Processed 7350/28863 images (25.47%)
+2025-04-06 06:06:50,288 - Processing class: Cantaloupe 2 -> Cantaloupe
+2025-04-06 06:06:51,034 - Processed 7400/28863 images (25.64%)
+2025-04-06 06:06:51,885 - Processed 7450/28863 images (25.81%)
+2025-04-06 06:06:52,645 - Processed 7500/28863 images (25.98%)
+2025-04-06 06:06:52,902 - Processing class: Carambula 1 -> Carambula
+2025-04-06 06:06:53,437 - Processed 7550/28863 images (26.16%)
+2025-04-06 06:06:54,202 - Processed 7600/28863 images (26.33%)
+2025-04-06 06:06:54,969 - Processed 7650/28863 images (26.50%)
+2025-04-06 06:06:55,463 - Processing class: Carrot 1 -> Carrot
+2025-04-06 06:06:55,742 - Processed 7700/28863 images (26.68%)
+2025-04-06 06:06:56,240 - Processing class: Cauliflower 1 -> Cauliflower
+2025-04-06 06:06:56,516 - Processed 7750/28863 images (26.85%)
+2025-04-06 06:06:57,298 - Processed 7800/28863 images (27.02%)
+2025-04-06 06:06:58,066 - Processed 7850/28863 images (27.20%)
+2025-04-06 06:06:58,851 - Processed 7900/28863 images (27.37%)
+2025-04-06 06:06:59,607 - Processed 7950/28863 images (27.54%)
+2025-04-06 06:06:59,853 - Processing class: Cherimoya 1 -> Cherimoya
+2025-04-06 06:07:00,369 - Processed 8000/28863 images (27.72%)
+2025-04-06 06:07:01,168 - Processed 8050/28863 images (27.89%)
+2025-04-06 06:07:01,959 - Processed 8100/28863 images (28.06%)
+2025-04-06 06:07:02,711 - Processed 8150/28863 images (28.24%)
+2025-04-06 06:07:03,471 - Processed 8200/28863 images (28.41%)
+2025-04-06 06:07:04,268 - Processed 8250/28863 images (28.58%)
+2025-04-06 06:07:04,834 - Processing class: Cherry 1 -> Cherry
+2025-04-06 06:07:05,047 - Processed 8300/28863 images (28.76%)
+2025-04-06 06:07:05,830 - Processed 8350/28863 images (28.93%)
+2025-04-06 06:07:06,602 - Processed 8400/28863 images (29.10%)
+2025-04-06 06:07:07,352 - Processed 8450/28863 images (29.28%)
+2025-04-06 06:07:07,353 - Processing class: Cherry 2 -> Cherry
+2025-04-06 06:07:08,158 - Processed 8500/28863 images (29.45%)
+2025-04-06 06:07:08,925 - Processed 8550/28863 images (29.62%)
+2025-04-06 06:07:09,686 - Processed 8600/28863 images (29.80%)
+2025-04-06 06:07:10,460 - Processed 8650/28863 images (29.97%)
+2025-04-06 06:07:11,183 - Processing class: Cherry Rainier 1 -> Cherry
+2025-04-06 06:07:11,247 - Processed 8700/28863 images (30.14%)
+2025-04-06 06:07:12,013 - Processed 8750/28863 images (30.32%)
+2025-04-06 06:07:12,779 - Processed 8800/28863 images (30.49%)
+2025-04-06 06:07:13,575 - Processed 8850/28863 images (30.66%)
+2025-04-06 06:07:14,361 - Processed 8900/28863 images (30.84%)
+2025-04-06 06:07:15,047 - Processing class: Cherry Wax Black 1 -> Cherry
+2025-04-06 06:07:15,174 - Processed 8950/28863 images (31.01%)
+2025-04-06 06:07:15,941 - Processed 9000/28863 images (31.18%)
+2025-04-06 06:07:16,729 - Processed 9050/28863 images (31.36%)
+2025-04-06 06:07:17,525 - Processed 9100/28863 images (31.53%)
+2025-04-06 06:07:17,619 - Processing class: Cherry Wax not rippen 1 -> Cherry
+2025-04-06 06:07:18,296 - Processed 9150/28863 images (31.70%)
+2025-04-06 06:07:19,169 - Processed 9200/28863 images (31.87%)
+2025-04-06 06:07:19,985 - Processed 9250/28863 images (32.05%)
+2025-04-06 06:07:20,739 - Processed 9300/28863 images (32.22%)
+2025-04-06 06:07:21,243 - Processing class: Cherry Wax Red 1 -> Cherry
+2025-04-06 06:07:21,554 - Processed 9350/28863 images (32.39%)
+2025-04-06 06:07:22,313 - Processed 9400/28863 images (32.57%)
+2025-04-06 06:07:23,089 - Processed 9450/28863 images (32.74%)
+2025-04-06 06:07:23,799 - Processing class: Cherry Wax Yellow 1 -> Cherry
+2025-04-06 06:07:23,876 - Processed 9500/28863 images (32.91%)
+2025-04-06 06:07:24,650 - Processed 9550/28863 images (33.09%)
+2025-04-06 06:07:25,393 - Processed 9600/28863 images (33.26%)
+2025-04-06 06:07:26,150 - Processed 9650/28863 images (33.43%)
+2025-04-06 06:07:26,291 - Processing class: Chestnut 1 -> Chestnut
+2025-04-06 06:07:26,905 - Processed 9700/28863 images (33.61%)
+2025-04-06 06:07:27,664 - Processed 9750/28863 images (33.78%)
+2025-04-06 06:07:28,423 - Processed 9800/28863 images (33.95%)
+2025-04-06 06:07:28,607 - Processing class: Clementine 1 -> Clementine
+2025-04-06 06:07:29,176 - Processed 9850/28863 images (34.13%)
+2025-04-06 06:07:29,940 - Processed 9900/28863 images (34.30%)
+2025-04-06 06:07:30,697 - Processed 9950/28863 images (34.47%)
+2025-04-06 06:07:31,114 - Processing class: Cocos 1 -> Coconut
+2025-04-06 06:07:31,446 - Processed 10000/28863 images (34.65%)
+2025-04-06 06:07:32,189 - Processed 10050/28863 images (34.82%)
+2025-04-06 06:07:32,933 - Processed 10100/28863 images (34.99%)
+2025-04-06 06:07:33,644 - Processing class: Corn 1 -> Corn
+2025-04-06 06:07:33,739 - Processed 10150/28863 images (35.17%)
+2025-04-06 06:07:34,543 - Processed 10200/28863 images (35.34%)
+2025-04-06 06:07:35,329 - Processed 10250/28863 images (35.51%)
+2025-04-06 06:07:35,985 - Processing class: Corn Husk 1 -> Corn
+2025-04-06 06:07:36,075 - Processed 10300/28863 images (35.69%)
+2025-04-06 06:07:36,810 - Processed 10350/28863 images (35.86%)
+2025-04-06 06:07:37,552 - Processed 10400/28863 images (36.03%)
+2025-04-06 06:07:38,256 - Processing class: Cucumber 1 -> Cucumber
+2025-04-06 06:07:38,287 - Processed 10450/28863 images (36.21%)
+2025-04-06 06:07:39,007 - Processing class: Cucumber 10 -> Cucumber
+2025-04-06 06:07:39,038 - Processed 10500/28863 images (36.38%)
+2025-04-06 06:07:39,776 - Processed 10550/28863 images (36.55%)
+2025-04-06 06:07:40,513 - Processed 10600/28863 images (36.73%)
+2025-04-06 06:07:41,254 - Processed 10650/28863 images (36.90%)
+2025-04-06 06:07:42,006 - Processed 10700/28863 images (37.07%)
+2025-04-06 06:07:42,571 - Processing class: Cucumber 3 -> Cucumber
+2025-04-06 06:07:42,755 - Processed 10750/28863 images (37.24%)
+2025-04-06 06:07:43,503 - Processed 10800/28863 images (37.42%)
+2025-04-06 06:07:43,790 - Processing class: Cucumber 9 -> Cucumber
+2025-04-06 06:07:44,247 - Processed 10850/28863 images (37.59%)
+2025-04-06 06:07:44,984 - Processed 10900/28863 images (37.76%)
+2025-04-06 06:07:45,721 - Processed 10950/28863 images (37.94%)
+2025-04-06 06:07:46,067 - Processing class: Cucumber Ripe 1 -> Cucumber
+2025-04-06 06:07:46,467 - Processed 11000/28863 images (38.11%)
+2025-04-06 06:07:47,204 - Processed 11050/28863 images (38.28%)
+2025-04-06 06:07:47,934 - Processed 11100/28863 images (38.46%)
+2025-04-06 06:07:47,979 - Processing class: Cucumber Ripe 2 -> Cucumber
+2025-04-06 06:07:48,674 - Processed 11150/28863 images (38.63%)
+2025-04-06 06:07:49,409 - Processed 11200/28863 images (38.80%)
+2025-04-06 06:07:50,148 - Processed 11250/28863 images (38.98%)
+2025-04-06 06:07:50,285 - Processing class: Dates 1 -> Dates
+2025-04-06 06:07:50,902 - Processed 11300/28863 images (39.15%)
+2025-04-06 06:07:51,644 - Processed 11350/28863 images (39.32%)
+2025-04-06 06:07:52,390 - Processed 11400/28863 images (39.50%)
+2025-04-06 06:07:52,763 - Processing class: Eggplant 1 -> Eggplant
+2025-04-06 06:07:53,132 - Processed 11450/28863 images (39.67%)
+2025-04-06 06:07:53,869 - Processed 11500/28863 images (39.84%)
+2025-04-06 06:07:54,605 - Processed 11550/28863 images (40.02%)
+2025-04-06 06:07:55,062 - Processing class: Eggplant long 1 -> Eggplant
+2025-04-06 06:07:55,350 - Processed 11600/28863 images (40.19%)
+2025-04-06 06:07:56,089 - Processed 11650/28863 images (40.36%)
+2025-04-06 06:07:56,257 - Processing class: Fig 1 -> Fig
+2025-04-06 06:07:56,832 - Processed 11700/28863 images (40.54%)
+2025-04-06 06:07:57,569 - Processed 11750/28863 images (40.71%)
+2025-04-06 06:07:58,305 - Processed 11800/28863 images (40.88%)
+2025-04-06 06:07:59,095 - Processed 11850/28863 images (41.06%)
+2025-04-06 06:07:59,756 - Processing class: Ginger Root 1 -> Ginger
+2025-04-06 06:07:59,834 - Processed 11900/28863 images (41.23%)
+2025-04-06 06:08:00,583 - Processed 11950/28863 images (41.40%)
+2025-04-06 06:08:01,233 - Processing class: Gooseberry 1 -> Gooseberry
+2025-04-06 06:08:01,325 - Processed 12000/28863 images (41.58%)
+2025-04-06 06:08:02,062 - Processed 12050/28863 images (41.75%)
+2025-04-06 06:08:02,797 - Processed 12100/28863 images (41.92%)
+2025-04-06 06:08:03,505 - Processing class: Granadilla 1 -> Granadilla
+2025-04-06 06:08:03,537 - Processed 12150/28863 images (42.10%)
+2025-04-06 06:08:04,277 - Processed 12200/28863 images (42.27%)
+2025-04-06 06:08:05,016 - Processed 12250/28863 images (42.44%)
+2025-04-06 06:08:05,754 - Processed 12300/28863 images (42.62%)
+2025-04-06 06:08:05,967 - Processing class: Grape Blue 1 -> Grape
+2025-04-06 06:08:06,498 - Processed 12350/28863 images (42.79%)
+2025-04-06 06:08:07,236 - Processed 12400/28863 images (42.96%)
+2025-04-06 06:08:07,976 - Processed 12450/28863 images (43.13%)
+2025-04-06 06:08:08,716 - Processed 12500/28863 images (43.31%)
+2025-04-06 06:08:09,453 - Processed 12550/28863 images (43.48%)
+2025-04-06 06:08:10,191 - Processed 12600/28863 images (43.65%)
+2025-04-06 06:08:10,819 - Processing class: Grape Pink 1 -> Grape
+2025-04-06 06:08:10,941 - Processed 12650/28863 images (43.83%)
+2025-04-06 06:08:11,679 - Processed 12700/28863 images (44.00%)
+2025-04-06 06:08:12,457 - Processed 12750/28863 images (44.17%)
+2025-04-06 06:08:13,217 - Processed 12800/28863 images (44.35%)
+2025-04-06 06:08:13,313 - Processing class: Grape White 1 -> Grape
+2025-04-06 06:08:13,977 - Processed 12850/28863 images (44.52%)
+2025-04-06 06:08:14,739 - Processed 12900/28863 images (44.69%)
+2025-04-06 06:08:15,504 - Processed 12950/28863 images (44.87%)
+2025-04-06 06:08:15,844 - Processing class: Grape White 2 -> Grape
+2025-04-06 06:08:16,262 - Processed 13000/28863 images (45.04%)
+2025-04-06 06:08:17,030 - Processed 13050/28863 images (45.21%)
+2025-04-06 06:08:17,791 - Processed 13100/28863 images (45.39%)
+2025-04-06 06:08:18,371 - Processing class: Grape White 3 -> Grape
+2025-04-06 06:08:18,556 - Processed 13150/28863 images (45.56%)
+2025-04-06 06:08:19,424 - Processed 13200/28863 images (45.73%)
+2025-04-06 06:08:20,205 - Processed 13250/28863 images (45.91%)
+2025-04-06 06:08:20,980 - Processed 13300/28863 images (46.08%)
+2025-04-06 06:08:21,020 - Processing class: Grape White 4 -> Grape
+2025-04-06 06:08:21,873 - Processed 13350/28863 images (46.25%)
+2025-04-06 06:08:22,628 - Processed 13400/28863 images (46.43%)
+2025-04-06 06:08:23,376 - Processed 13450/28863 images (46.60%)
+2025-04-06 06:08:23,528 - Processing class: Grapefruit Pink 1 -> Grapefruit
+2025-04-06 06:08:24,250 - Processed 13500/28863 images (46.77%)
+2025-04-06 06:08:25,038 - Processed 13550/28863 images (46.95%)
+2025-04-06 06:08:25,839 - Processed 13600/28863 images (47.12%)
+2025-04-06 06:08:26,277 - Processing class: Grapefruit White 1 -> Grapefruit
+2025-04-06 06:08:26,665 - Processed 13650/28863 images (47.29%)
+2025-04-06 06:08:27,432 - Processed 13700/28863 images (47.47%)
+2025-04-06 06:08:28,347 - Processed 13750/28863 images (47.64%)
+2025-04-06 06:08:29,039 - Processing class: Guava 1 -> Guava
+2025-04-06 06:08:29,293 - Processed 13800/28863 images (47.81%)
+2025-04-06 06:08:30,079 - Processed 13850/28863 images (47.99%)
+2025-04-06 06:08:30,870 - Processed 13900/28863 images (48.16%)
+2025-04-06 06:08:31,609 - Processed 13950/28863 images (48.33%)
+2025-04-06 06:08:31,702 - Processing class: Hazelnut 1 -> Hazelnut
+2025-04-06 06:08:32,396 - Processed 14000/28863 images (48.51%)
+2025-04-06 06:08:33,202 - Processed 14050/28863 images (48.68%)
+2025-04-06 06:08:34,120 - Processed 14100/28863 images (48.85%)
+2025-04-06 06:08:34,319 - Processing class: Huckleberry 1 -> Huckleberry
+2025-04-06 06:08:34,857 - Processed 14150/28863 images (49.02%)
+2025-04-06 06:08:35,605 - Processed 14200/28863 images (49.20%)
+2025-04-06 06:08:36,352 - Processed 14250/28863 images (49.37%)
+2025-04-06 06:08:36,774 - Processing class: Kaki 1 -> Kaki
+2025-04-06 06:08:37,088 - Processed 14300/28863 images (49.54%)
+2025-04-06 06:08:37,822 - Processed 14350/28863 images (49.72%)
+2025-04-06 06:08:38,567 - Processed 14400/28863 images (49.89%)
+2025-04-06 06:08:39,238 - Processing class: Kiwi 1 -> Kiwi
+2025-04-06 06:08:39,317 - Processed 14450/28863 images (50.06%)
+2025-04-06 06:08:40,051 - Processed 14500/28863 images (50.24%)
+2025-04-06 06:08:40,795 - Processed 14550/28863 images (50.41%)
+2025-04-06 06:08:41,593 - Processed 14600/28863 images (50.58%)
+2025-04-06 06:08:41,609 - Processing class: Kohlrabi 1 -> Kohlrabi
+2025-04-06 06:08:42,338 - Processed 14650/28863 images (50.76%)
+2025-04-06 06:08:43,074 - Processed 14700/28863 images (50.93%)
+2025-04-06 06:08:43,814 - Processed 14750/28863 images (51.10%)
+2025-04-06 06:08:43,937 - Processing class: Kumquats 1 -> Kumquat
+2025-04-06 06:08:44,551 - Processed 14800/28863 images (51.28%)
+2025-04-06 06:08:45,284 - Processed 14850/28863 images (51.45%)
+2025-04-06 06:08:46,033 - Processed 14900/28863 images (51.62%)
+2025-04-06 06:08:46,391 - Processing class: Lemon 1 -> Lemon
+2025-04-06 06:08:46,798 - Processed 14950/28863 images (51.80%)
+2025-04-06 06:08:47,549 - Processed 15000/28863 images (51.97%)
+2025-04-06 06:08:48,324 - Processed 15050/28863 images (52.14%)
+2025-04-06 06:08:48,907 - Processing class: Lemon Meyer 1 -> Lemon
+2025-04-06 06:08:49,090 - Processed 15100/28863 images (52.32%)
+2025-04-06 06:08:49,808 - Processed 15150/28863 images (52.49%)
+2025-04-06 06:08:50,541 - Processed 15200/28863 images (52.66%)
+2025-04-06 06:08:51,276 - Processed 15250/28863 images (52.84%)
+2025-04-06 06:08:51,340 - Processing class: Limes 1 -> Lime
+2025-04-06 06:08:52,017 - Processed 15300/28863 images (53.01%)
+2025-04-06 06:08:52,758 - Processed 15350/28863 images (53.18%)
+2025-04-06 06:08:53,553 - Processed 15400/28863 images (53.36%)
+2025-04-06 06:08:53,875 - Processing class: Lychee 1 -> Lychee
+2025-04-06 06:08:54,335 - Processed 15450/28863 images (53.53%)
+2025-04-06 06:08:55,067 - Processed 15500/28863 images (53.70%)
+2025-04-06 06:08:55,871 - Processed 15550/28863 images (53.88%)
+2025-04-06 06:08:56,401 - Processing class: Mandarine 1 -> Mandarine
+2025-04-06 06:08:56,633 - Processed 15600/28863 images (54.05%)
+2025-04-06 06:08:57,377 - Processed 15650/28863 images (54.22%)
+2025-04-06 06:08:58,109 - Processed 15700/28863 images (54.39%)
+2025-04-06 06:08:58,839 - Processed 15750/28863 images (54.57%)
+2025-04-06 06:08:58,871 - Processing class: Mango 1 -> Mango
+2025-04-06 06:08:59,571 - Processed 15800/28863 images (54.74%)
+2025-04-06 06:09:00,313 - Processed 15850/28863 images (54.91%)
+2025-04-06 06:09:01,052 - Processed 15900/28863 images (55.09%)
+2025-04-06 06:09:01,314 - Processing class: Mango Red 1 -> Mango
+2025-04-06 06:09:01,782 - Processed 15950/28863 images (55.26%)
+2025-04-06 06:09:02,512 - Processed 16000/28863 images (55.43%)
+2025-04-06 06:09:03,243 - Processed 16050/28863 images (55.61%)
+2025-04-06 06:09:03,392 - Processing class: Mangostan 1 -> Mangosteen
+2025-04-06 06:09:03,959 - Processed 16100/28863 images (55.78%)
+2025-04-06 06:09:04,686 - Processed 16150/28863 images (55.95%)
+2025-04-06 06:09:04,867 - Processing class: Maracuja 1 -> Passion Fruit
+2025-04-06 06:09:05,490 - Processed 16200/28863 images (56.13%)
+2025-04-06 06:09:06,329 - Processed 16250/28863 images (56.30%)
+2025-04-06 06:09:07,152 - Processed 16300/28863 images (56.47%)
+2025-04-06 06:09:07,584 - Processing class: Melon Piel de Sapo 1 -> Melon
+2025-04-06 06:09:07,928 - Processed 16350/28863 images (56.65%)
+2025-04-06 06:09:08,741 - Processed 16400/28863 images (56.82%)
+2025-04-06 06:09:09,554 - Processed 16450/28863 images (56.99%)
+2025-04-06 06:09:10,347 - Processed 16500/28863 images (57.17%)
+2025-04-06 06:09:11,124 - Processed 16550/28863 images (57.34%)
+2025-04-06 06:09:11,527 - Processing class: Mulberry 1 -> Mulberry
+2025-04-06 06:09:11,946 - Processed 16600/28863 images (57.51%)
+2025-04-06 06:09:12,737 - Processed 16650/28863 images (57.69%)
+2025-04-06 06:09:13,561 - Processed 16700/28863 images (57.86%)
+2025-04-06 06:09:14,193 - Processing class: Nectarine 1 -> Nectarine
+2025-04-06 06:09:14,391 - Processed 16750/28863 images (58.03%)
+2025-04-06 06:09:15,192 - Processed 16800/28863 images (58.21%)
+2025-04-06 06:09:16,018 - Processed 16850/28863 images (58.38%)
+2025-04-06 06:09:16,822 - Processed 16900/28863 images (58.55%)
+2025-04-06 06:09:16,856 - Processing class: Nectarine Flat 1 -> Nectarine
+2025-04-06 06:09:17,631 - Processed 16950/28863 images (58.73%)
+2025-04-06 06:09:18,453 - Processed 17000/28863 images (58.90%)
+2025-04-06 06:09:19,236 - Processed 17050/28863 images (59.07%)
+2025-04-06 06:09:19,430 - Processing class: Nut Forest 1 -> Nut
+2025-04-06 06:09:20,041 - Processed 17100/28863 images (59.25%)
+2025-04-06 06:09:20,858 - Processed 17150/28863 images (59.42%)
+2025-04-06 06:09:21,652 - Processed 17200/28863 images (59.59%)
+2025-04-06 06:09:22,452 - Processed 17250/28863 images (59.77%)
+2025-04-06 06:09:22,935 - Processing class: Nut Pecan 1 -> Nut
+2025-04-06 06:09:23,276 - Processed 17300/28863 images (59.94%)
+2025-04-06 06:09:24,018 - Processed 17350/28863 images (60.11%)
+2025-04-06 06:09:24,935 - Processed 17400/28863 images (60.28%)
+2025-04-06 06:09:25,714 - Processed 17450/28863 images (60.46%)
+2025-04-06 06:09:25,841 - Processing class: Onion Red 1 -> Onion
+2025-04-06 06:09:26,496 - Processed 17500/28863 images (60.63%)
+2025-04-06 06:09:27,266 - Processed 17550/28863 images (60.80%)
+2025-04-06 06:09:28,035 - Processed 17600/28863 images (60.98%)
+2025-04-06 06:09:28,177 - Processing class: Onion Red Peeled 1 -> Onion
+2025-04-06 06:09:28,889 - Processed 17650/28863 images (61.15%)
+2025-04-06 06:09:29,657 - Processed 17700/28863 images (61.32%)
+2025-04-06 06:09:30,411 - Processed 17750/28863 images (61.50%)
+2025-04-06 06:09:30,612 - Processing class: Onion White 1 -> Onion
+2025-04-06 06:09:31,183 - Processed 17800/28863 images (61.67%)
+2025-04-06 06:09:31,921 - Processed 17850/28863 images (61.84%)
+2025-04-06 06:09:32,661 - Processed 17900/28863 images (62.02%)
+2025-04-06 06:09:32,797 - Processing class: Orange 1 -> Orange
+2025-04-06 06:09:33,409 - Processed 17950/28863 images (62.19%)
+2025-04-06 06:09:34,142 - Processed 18000/28863 images (62.36%)
+2025-04-06 06:09:34,898 - Processed 18050/28863 images (62.54%)
+2025-04-06 06:09:35,208 - Processing class: Papaya 1 -> Papaya
+2025-04-06 06:09:35,674 - Processed 18100/28863 images (62.71%)
+2025-04-06 06:09:36,414 - Processed 18150/28863 images (62.88%)
+2025-04-06 06:09:37,157 - Processed 18200/28863 images (63.06%)
+2025-04-06 06:09:37,734 - Processing class: Passion Fruit 1 -> Passion Fruit
+2025-04-06 06:09:37,990 - Processed 18250/28863 images (63.23%)
+2025-04-06 06:09:38,761 - Processed 18300/28863 images (63.40%)
+2025-04-06 06:09:39,518 - Processed 18350/28863 images (63.58%)
+2025-04-06 06:09:40,268 - Processing class: Peach 1 -> Peach
+2025-04-06 06:09:40,284 - Processed 18400/28863 images (63.75%)
+2025-04-06 06:09:41,087 - Processed 18450/28863 images (63.92%)
+2025-04-06 06:09:41,979 - Processed 18500/28863 images (64.10%)
+2025-04-06 06:09:42,787 - Processed 18550/28863 images (64.27%)
+2025-04-06 06:09:42,999 - Processing class: Peach 2 -> Peach
+2025-04-06 06:09:43,591 - Processed 18600/28863 images (64.44%)
+2025-04-06 06:09:44,347 - Processed 18650/28863 images (64.62%)
+2025-04-06 06:09:45,101 - Processed 18700/28863 images (64.79%)
+2025-04-06 06:09:45,857 - Processed 18750/28863 images (64.96%)
+2025-04-06 06:09:46,599 - Processed 18800/28863 images (65.14%)
+2025-04-06 06:09:46,742 - Processing class: Peach Flat 1 -> Peach
+2025-04-06 06:09:47,410 - Processed 18850/28863 images (65.31%)
+2025-04-06 06:09:48,206 - Processed 18900/28863 images (65.48%)
+2025-04-06 06:09:48,994 - Processed 18950/28863 images (65.65%)
+2025-04-06 06:09:49,340 - Processing class: Pear 1 -> Pear
+2025-04-06 06:09:49,769 - Processed 19000/28863 images (65.83%)
+2025-04-06 06:09:50,589 - Processed 19050/28863 images (66.00%)
+2025-04-06 06:09:51,353 - Processed 19100/28863 images (66.17%)
+2025-04-06 06:09:51,918 - Processing class: Pear 2 -> Pear
+2025-04-06 06:09:52,113 - Processed 19150/28863 images (66.35%)
+2025-04-06 06:09:52,865 - Processed 19200/28863 images (66.52%)
+2025-04-06 06:09:53,613 - Processed 19250/28863 images (66.69%)
+2025-04-06 06:09:54,366 - Processed 19300/28863 images (66.87%)
+2025-04-06 06:09:55,113 - Processed 19350/28863 images (67.04%)
+2025-04-06 06:09:55,401 - Processing class: Pear 3 -> Pear
+2025-04-06 06:09:55,866 - Processed 19400/28863 images (67.21%)
+2025-04-06 06:09:56,497 - Processing class: Pear Abate 1 -> Pear
+2025-04-06 06:09:56,652 - Processed 19450/28863 images (67.39%)
+2025-04-06 06:09:57,505 - Processed 19500/28863 images (67.56%)
+2025-04-06 06:09:58,252 - Processed 19550/28863 images (67.73%)
+2025-04-06 06:09:59,000 - Processed 19600/28863 images (67.91%)
+2025-04-06 06:09:59,120 - Processing class: Pear Forelle 1 -> Pear
+2025-04-06 06:09:59,789 - Processed 19650/28863 images (68.08%)
+2025-04-06 06:10:00,554 - Processed 19700/28863 images (68.25%)
+2025-04-06 06:10:01,334 - Processed 19750/28863 images (68.43%)
+2025-04-06 06:10:02,136 - Processed 19800/28863 images (68.60%)
+2025-04-06 06:10:02,754 - Processing class: Pear Kaiser 1 -> Pear
+2025-04-06 06:10:02,901 - Processed 19850/28863 images (68.77%)
+2025-04-06 06:10:03,810 - Processed 19900/28863 images (68.95%)
+2025-04-06 06:10:04,481 - Processing class: Pear Monster 1 -> Pear
+2025-04-06 06:10:04,588 - Processed 19950/28863 images (69.12%)
+2025-04-06 06:10:05,379 - Processed 20000/28863 images (69.29%)
+2025-04-06 06:10:06,159 - Processed 20050/28863 images (69.47%)
+2025-04-06 06:10:06,946 - Processed 20100/28863 images (69.64%)
+2025-04-06 06:10:07,087 - Processing class: Pear Red 1 -> Pear
+2025-04-06 06:10:07,695 - Processed 20150/28863 images (69.81%)
+2025-04-06 06:10:08,453 - Processed 20200/28863 images (69.99%)
+2025-04-06 06:10:09,223 - Processed 20250/28863 images (70.16%)
+2025-04-06 06:10:09,963 - Processed 20300/28863 images (70.33%)
+2025-04-06 06:10:10,422 - Processing class: Pear Stone 1 -> Pear
+2025-04-06 06:10:10,705 - Processed 20350/28863 images (70.51%)
+2025-04-06 06:10:11,447 - Processed 20400/28863 images (70.68%)
+2025-04-06 06:10:12,192 - Processed 20450/28863 images (70.85%)
+2025-04-06 06:10:12,930 - Processed 20500/28863 images (71.03%)
+2025-04-06 06:10:13,676 - Processed 20550/28863 images (71.20%)
+2025-04-06 06:10:13,946 - Processing class: Pear Williams 1 -> Pear
+2025-04-06 06:10:14,420 - Processed 20600/28863 images (71.37%)
+2025-04-06 06:10:15,180 - Processed 20650/28863 images (71.54%)
+2025-04-06 06:10:15,954 - Processed 20700/28863 images (71.72%)
+2025-04-06 06:10:16,460 - Processing class: Pepino 1 -> Pepino
+2025-04-06 06:10:16,701 - Processed 20750/28863 images (71.89%)
+2025-04-06 06:10:17,442 - Processed 20800/28863 images (72.06%)
+2025-04-06 06:10:18,182 - Processed 20850/28863 images (72.24%)
+2025-04-06 06:10:18,927 - Processed 20900/28863 images (72.41%)
+2025-04-06 06:10:18,928 - Processing class: Pepper Green 1 -> Pepper
+2025-04-06 06:10:19,668 - Processed 20950/28863 images (72.58%)
+2025-04-06 06:10:20,415 - Processed 21000/28863 images (72.76%)
+2025-04-06 06:10:21,132 - Processing class: Pepper Orange 1 -> Pepper
+2025-04-06 06:10:21,163 - Processed 21050/28863 images (72.93%)
+2025-04-06 06:10:21,908 - Processed 21100/28863 images (73.10%)
+2025-04-06 06:10:22,655 - Processed 21150/28863 images (73.28%)
+2025-04-06 06:10:23,397 - Processed 21200/28863 images (73.45%)
+2025-04-06 06:10:24,135 - Processed 21250/28863 images (73.62%)
+2025-04-06 06:10:24,601 - Processing class: Pepper Red 1 -> Pepper
+2025-04-06 06:10:24,869 - Processed 21300/28863 images (73.80%)
+2025-04-06 06:10:25,612 - Processed 21350/28863 images (73.97%)
+2025-04-06 06:10:26,350 - Processed 21400/28863 images (74.14%)
+2025-04-06 06:10:27,099 - Processed 21450/28863 images (74.32%)
+2025-04-06 06:10:27,841 - Processed 21500/28863 images (74.49%)
+2025-04-06 06:10:27,901 - Processing class: Pepper Yellow 1 -> Pepper
+2025-04-06 06:10:28,585 - Processed 21550/28863 images (74.66%)
+2025-04-06 06:10:29,328 - Processed 21600/28863 images (74.84%)
+2025-04-06 06:10:30,077 - Processed 21650/28863 images (75.01%)
+2025-04-06 06:10:30,829 - Processed 21700/28863 images (75.18%)
+2025-04-06 06:10:31,218 - Processing class: Physalis 1 -> Physalis
+2025-04-06 06:10:31,576 - Processed 21750/28863 images (75.36%)
+2025-04-06 06:10:32,315 - Processed 21800/28863 images (75.53%)
+2025-04-06 06:10:33,147 - Processed 21850/28863 images (75.70%)
+2025-04-06 06:10:33,740 - Processing class: Physalis with Husk 1 -> Physalis
+2025-04-06 06:10:33,890 - Processed 21900/28863 images (75.88%)
+2025-04-06 06:10:34,628 - Processed 21950/28863 images (76.05%)
+2025-04-06 06:10:35,371 - Processed 22000/28863 images (76.22%)
+2025-04-06 06:10:36,116 - Processed 22050/28863 images (76.40%)
+2025-04-06 06:10:36,176 - Processing class: Pineapple 1 -> Pineapple
+2025-04-06 06:10:36,859 - Processed 22100/28863 images (76.57%)
+2025-04-06 06:10:37,592 - Processed 22150/28863 images (76.74%)
+2025-04-06 06:10:38,333 - Processed 22200/28863 images (76.92%)
+2025-04-06 06:10:38,633 - Processing class: Pineapple Mini 1 -> Pineapple
+2025-04-06 06:10:39,078 - Processed 22250/28863 images (77.09%)
+2025-04-06 06:10:39,832 - Processed 22300/28863 images (77.26%)
+2025-04-06 06:10:40,599 - Processed 22350/28863 images (77.43%)
+2025-04-06 06:10:41,090 - Processing class: Pistachio 1 -> Pistachio
+2025-04-06 06:10:41,344 - Processed 22400/28863 images (77.61%)
+2025-04-06 06:10:42,097 - Processed 22450/28863 images (77.78%)
+2025-04-06 06:10:42,856 - Processed 22500/28863 images (77.95%)
+2025-04-06 06:10:43,597 - Processed 22550/28863 images (78.13%)
+2025-04-06 06:10:44,342 - Processed 22600/28863 images (78.30%)
+2025-04-06 06:10:44,560 - Processing class: Pitahaya Red 1 -> Pitahaya
+2025-04-06 06:10:45,126 - Processed 22650/28863 images (78.47%)
+2025-04-06 06:10:45,900 - Processed 22700/28863 images (78.65%)
+2025-04-06 06:10:46,660 - Processed 22750/28863 images (78.82%)
+2025-04-06 06:10:47,119 - Processing class: Plum 1 -> Plum
+2025-04-06 06:10:47,420 - Processed 22800/28863 images (78.99%)
+2025-04-06 06:10:48,165 - Processed 22850/28863 images (79.17%)
+2025-04-06 06:10:48,927 - Processed 22900/28863 images (79.34%)
+2025-04-06 06:10:49,393 - Processing class: Plum 2 -> Plum
+2025-04-06 06:10:49,679 - Processed 22950/28863 images (79.51%)
+2025-04-06 06:10:50,428 - Processed 23000/28863 images (79.69%)
+2025-04-06 06:10:51,190 - Processed 23050/28863 images (79.86%)
+2025-04-06 06:10:51,528 - Processing class: Plum 3 -> Plum
+2025-04-06 06:10:51,932 - Processed 23100/28863 images (80.03%)
+2025-04-06 06:10:52,675 - Processed 23150/28863 images (80.21%)
+2025-04-06 06:10:53,439 - Processed 23200/28863 images (80.38%)
+2025-04-06 06:10:54,203 - Processed 23250/28863 images (80.55%)
+2025-04-06 06:10:54,965 - Processed 23300/28863 images (80.73%)
+2025-04-06 06:10:55,726 - Processed 23350/28863 images (80.90%)
+2025-04-06 06:10:56,135 - Processing class: Pomegranate 1 -> Pomegranate
+2025-04-06 06:10:56,485 - Processed 23400/28863 images (81.07%)
+2025-04-06 06:10:57,251 - Processed 23450/28863 images (81.25%)
+2025-04-06 06:10:58,023 - Processed 23500/28863 images (81.42%)
+2025-04-06 06:10:58,650 - Processing class: Pomelo Sweetie 1 -> Pomelo
+2025-04-06 06:10:58,794 - Processed 23550/28863 images (81.59%)
+2025-04-06 06:10:59,548 - Processed 23600/28863 images (81.77%)
+2025-04-06 06:11:00,320 - Processed 23650/28863 images (81.94%)
+2025-04-06 06:11:00,992 - Processing class: Potato Red 1 -> Potato
+2025-04-06 06:11:01,096 - Processed 23700/28863 images (82.11%)
+2025-04-06 06:11:01,881 - Processed 23750/28863 images (82.29%)
+2025-04-06 06:11:02,681 - Processed 23800/28863 images (82.46%)
+2025-04-06 06:11:03,347 - Processing class: Potato Red Washed 1 -> Potato
+2025-04-06 06:11:03,442 - Processed 23850/28863 images (82.63%)
+2025-04-06 06:11:04,192 - Processed 23900/28863 images (82.80%)
+2025-04-06 06:11:04,932 - Processed 23950/28863 images (82.98%)
+2025-04-06 06:11:05,595 - Processing class: Potato Sweet 1 -> Potato
+2025-04-06 06:11:05,673 - Processed 24000/28863 images (83.15%)
+2025-04-06 06:11:06,413 - Processed 24050/28863 images (83.32%)
+2025-04-06 06:11:07,164 - Processed 24100/28863 images (83.50%)
+2025-04-06 06:11:07,833 - Processing class: Potato White 1 -> Potato
+2025-04-06 06:11:07,909 - Processed 24150/28863 images (83.67%)
+2025-04-06 06:11:08,643 - Processed 24200/28863 images (83.84%)
+2025-04-06 06:11:09,384 - Processed 24250/28863 images (84.02%)
+2025-04-06 06:11:10,048 - Processing class: Quince 1 -> Quince
+2025-04-06 06:11:10,125 - Processed 24300/28863 images (84.19%)
+2025-04-06 06:11:10,868 - Processed 24350/28863 images (84.36%)
+2025-04-06 06:11:11,616 - Processed 24400/28863 images (84.54%)
+2025-04-06 06:11:12,354 - Processed 24450/28863 images (84.71%)
+2025-04-06 06:11:12,517 - Processing class: Quince 2 -> Quince
+2025-04-06 06:11:13,106 - Processed 24500/28863 images (84.88%)
+2025-04-06 06:11:13,851 - Processed 24550/28863 images (85.06%)
+2025-04-06 06:11:14,612 - Processed 24600/28863 images (85.23%)
+2025-04-06 06:11:15,381 - Processed 24650/28863 images (85.40%)
+2025-04-06 06:11:16,155 - Processed 24700/28863 images (85.58%)
+2025-04-06 06:11:16,172 - Processing class: Quince 3 -> Quince
+2025-04-06 06:11:16,924 - Processed 24750/28863 images (85.75%)
+2025-04-06 06:11:17,687 - Processed 24800/28863 images (85.92%)
+2025-04-06 06:11:18,439 - Processed 24850/28863 images (86.10%)
+2025-04-06 06:11:19,191 - Processed 24900/28863 images (86.27%)
+2025-04-06 06:11:19,848 - Processing class: Quince 4 -> Quince
+2025-04-06 06:11:19,961 - Processed 24950/28863 images (86.44%)
+2025-04-06 06:11:20,720 - Processed 25000/28863 images (86.62%)
+2025-04-06 06:11:21,465 - Processed 25050/28863 images (86.79%)
+2025-04-06 06:11:22,331 - Processed 25100/28863 images (86.96%)
+2025-04-06 06:11:23,094 - Processed 25150/28863 images (87.14%)
+2025-04-06 06:11:23,860 - Processing class: Rambutan 1 -> Rambutan
+2025-04-06 06:11:23,986 - Processed 25200/28863 images (87.31%)
+2025-04-06 06:11:24,775 - Processed 25250/28863 images (87.48%)
+2025-04-06 06:11:25,538 - Processed 25300/28863 images (87.66%)
+2025-04-06 06:11:26,296 - Processed 25350/28863 images (87.83%)
+2025-04-06 06:11:26,395 - Processing class: Raspberry 1 -> Raspberry
+2025-04-06 06:11:27,067 - Processed 25400/28863 images (88.00%)
+2025-04-06 06:11:27,957 - Processed 25450/28863 images (88.18%)
+2025-04-06 06:11:28,764 - Processed 25500/28863 images (88.35%)
+2025-04-06 06:11:29,108 - Processing class: Redcurrant 1 -> Redcurrant
+2025-04-06 06:11:29,542 - Processed 25550/28863 images (88.52%)
+2025-04-06 06:11:30,296 - Processed 25600/28863 images (88.69%)
+2025-04-06 06:11:31,041 - Processed 25650/28863 images (88.87%)
+2025-04-06 06:11:31,595 - Processing class: Salak 1 -> Salak
+2025-04-06 06:11:31,807 - Processed 25700/28863 images (89.04%)
+2025-04-06 06:11:32,566 - Processed 25750/28863 images (89.21%)
+2025-04-06 06:11:33,410 - Processed 25800/28863 images (89.39%)
+2025-04-06 06:11:34,189 - Processing class: Strawberry 1 -> Strawberry
+2025-04-06 06:11:34,223 - Processed 25850/28863 images (89.56%)
+2025-04-06 06:11:35,018 - Processed 25900/28863 images (89.73%)
+2025-04-06 06:11:35,814 - Processed 25950/28863 images (89.91%)
+2025-04-06 06:11:36,604 - Processed 26000/28863 images (90.08%)
+2025-04-06 06:11:36,800 - Processing class: Strawberry Wedge 1 -> Strawberry
+2025-04-06 06:11:37,396 - Processed 26050/28863 images (90.25%)
+2025-04-06 06:11:38,178 - Processed 26100/28863 images (90.43%)
+2025-04-06 06:11:38,937 - Processed 26150/28863 images (90.60%)
+2025-04-06 06:11:39,765 - Processed 26200/28863 images (90.77%)
+2025-04-06 06:11:40,547 - Processed 26250/28863 images (90.95%)
+2025-04-06 06:11:40,671 - Processing class: Tamarillo 1 -> Tamarillo
+2025-04-06 06:11:41,328 - Processed 26300/28863 images (91.12%)
+2025-04-06 06:11:42,140 - Processed 26350/28863 images (91.29%)
+2025-04-06 06:11:42,970 - Processed 26400/28863 images (91.47%)
+2025-04-06 06:11:43,348 - Processing class: Tangelo 1 -> Tangelo
+2025-04-06 06:11:43,808 - Processed 26450/28863 images (91.64%)
+2025-04-06 06:11:44,574 - Processed 26500/28863 images (91.81%)
+2025-04-06 06:11:45,359 - Processed 26550/28863 images (91.99%)
+2025-04-06 06:11:45,985 - Processing class: Tomato 1 -> Tomato
+2025-04-06 06:11:46,135 - Processed 26600/28863 images (92.16%)
+2025-04-06 06:11:46,872 - Processed 26650/28863 images (92.33%)
+2025-04-06 06:11:47,620 - Processed 26700/28863 images (92.51%)
+2025-04-06 06:11:48,362 - Processed 26750/28863 images (92.68%)
+2025-04-06 06:11:49,105 - Processed 26800/28863 images (92.85%)
+2025-04-06 06:11:49,631 - Processing class: Tomato 2 -> Tomato
+2025-04-06 06:11:49,841 - Processed 26850/28863 images (93.03%)
+2025-04-06 06:11:50,604 - Processed 26900/28863 images (93.20%)
+2025-04-06 06:11:51,372 - Processed 26950/28863 images (93.37%)
+2025-04-06 06:11:52,117 - Processed 27000/28863 images (93.55%)
+2025-04-06 06:11:52,860 - Processed 27050/28863 images (93.72%)
+2025-04-06 06:11:53,024 - Processing class: Tomato 3 -> Tomato
+2025-04-06 06:11:53,703 - Processed 27100/28863 images (93.89%)
+2025-04-06 06:11:54,458 - Processed 27150/28863 images (94.07%)
+2025-04-06 06:11:55,214 - Processed 27200/28863 images (94.24%)
+2025-04-06 06:11:55,965 - Processed 27250/28863 images (94.41%)
+2025-04-06 06:11:56,716 - Processed 27300/28863 images (94.58%)
+2025-04-06 06:11:56,829 - Processing class: Tomato 4 -> Tomato
+2025-04-06 06:11:57,470 - Processed 27350/28863 images (94.76%)
+2025-04-06 06:11:58,217 - Processed 27400/28863 images (94.93%)
+2025-04-06 06:11:58,961 - Processed 27450/28863 images (95.10%)
+2025-04-06 06:11:59,224 - Processing class: Tomato Cherry Red 1 -> Tomato
+2025-04-06 06:11:59,716 - Processed 27500/28863 images (95.28%)
+2025-04-06 06:12:00,462 - Processed 27550/28863 images (95.45%)
+2025-04-06 06:12:01,224 - Processed 27600/28863 images (95.62%)
+2025-04-06 06:12:01,682 - Processing class: Tomato Heart 1 -> Tomato
+2025-04-06 06:12:01,985 - Processed 27650/28863 images (95.80%)
+2025-04-06 06:12:02,773 - Processed 27700/28863 images (95.97%)
+2025-04-06 06:12:03,648 - Processed 27750/28863 images (96.14%)
+2025-04-06 06:12:04,406 - Processed 27800/28863 images (96.32%)
+2025-04-06 06:12:05,178 - Processed 27850/28863 images (96.49%)
+2025-04-06 06:12:05,322 - Processing class: Tomato Maroon 1 -> Tomato
+2025-04-06 06:12:05,990 - Processed 27900/28863 images (96.66%)
+2025-04-06 06:12:06,763 - Processed 27950/28863 images (96.84%)
+2025-04-06 06:12:07,331 - Processing class: Tomato not Ripened 1 -> Tomato
+2025-04-06 06:12:07,544 - Processed 28000/28863 images (97.01%)
+2025-04-06 06:12:08,286 - Processed 28050/28863 images (97.18%)
+2025-04-06 06:12:09,045 - Processed 28100/28863 images (97.36%)
+2025-04-06 06:12:09,825 - Processing class: Tomato Yellow 1 -> Tomato
+2025-04-06 06:12:09,918 - Processed 28150/28863 images (97.53%)
+2025-04-06 06:12:10,673 - Processed 28200/28863 images (97.70%)
+2025-04-06 06:12:11,417 - Processed 28250/28863 images (97.88%)
+2025-04-06 06:12:12,136 - Processing class: Walnut 1 -> Walnut
+2025-04-06 06:12:12,187 - Processed 28300/28863 images (98.05%)
+2025-04-06 06:12:12,941 - Processed 28350/28863 images (98.22%)
+2025-04-06 06:12:13,690 - Processed 28400/28863 images (98.40%)
+2025-04-06 06:12:14,501 - Processed 28450/28863 images (98.57%)
+2025-04-06 06:12:15,276 - Processed 28500/28863 images (98.74%)
+2025-04-06 06:12:15,983 - Processing class: Watermelon 1 -> Watermelon
+2025-04-06 06:12:16,047 - Processed 28550/28863 images (98.92%)
+2025-04-06 06:12:16,813 - Processed 28600/28863 images (99.09%)
+2025-04-06 06:12:17,568 - Processed 28650/28863 images (99.26%)
+2025-04-06 06:12:18,339 - Processed 28700/28863 images (99.44%)
+2025-04-06 06:12:18,386 - Processing class: Zucchini 1 -> Zucchini
+2025-04-06 06:12:19,113 - Processed 28750/28863 images (99.61%)
+2025-04-06 06:12:19,624 - Processing class: Zucchini dark 1 -> Zucchini
+2025-04-06 06:12:19,882 - Processed 28800/28863 images (99.78%)
+2025-04-06 06:12:20,663 - Processed 28850/28863 images (99.95%)
+2025-04-06 06:12:36,864 - Feature extraction complete. Saved to features/test_features.csv
