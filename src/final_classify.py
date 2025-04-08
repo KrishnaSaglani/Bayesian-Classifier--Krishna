@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 def classify():
-    os.makedirs("results1", exist_ok=True)
+    os.makedirs("results2", exist_ok=True)
 
     # Set up custom logger
     logger = logging.getLogger("FruitClassifier")
@@ -18,7 +18,7 @@ def classify():
 
     # Avoid adding duplicate handlers on repeated runs
     if not logger.handlers:
-        file_handler = logging.FileHandler("results1/classification.log")
+        file_handler = logging.FileHandler("results2/classification.log")
         formatter = logging.Formatter('%(asctime)s - %(message)s')
         file_handler.setFormatter(formatter)
         logger.addHandler(file_handler)
@@ -45,7 +45,7 @@ def classify():
             predictions.append(max(class_probs, key=class_probs.get))
         return predictions
 
-    X_test, y_test = load_data("features/test_features.csv")
+    X_test, y_test = load_data("features/test_adv_pca.csv")
     logger.info("Loaded test data.")
 
     with open("model/model_parameters.pkl", "rb") as f:
@@ -69,7 +69,7 @@ def classify():
     logger.info(f"Accuracy: {acc:.4f}")
     logger.info("Classification Report:\n" + report)
 
-    with open("results1/results.txt", "w") as f:
+    with open("results2/results.txt", "w") as f:
         f.write(f"Accuracy: {acc:.4f}\n\n")
         f.write("Classification Report:\n")
         f.write(report)
@@ -84,7 +84,7 @@ def classify():
     plt.xticks(rotation=45, ha='right')
     plt.yticks(rotation=0)
     plt.tight_layout()
-    plt.savefig("results1/confusion_matrix.png")
+    plt.savefig("results2/confusion_matrix.png")
     plt.show()
 
 if __name__ == "__main__":

@@ -1,0 +1,46 @@
+Banana 2.jpg,Banana
+Grapes 1.jpg,Grapes
+Grapes 2.jpg,Grapes
+Lemon 1.jpg,Lemon
+Mango 1.jpg,Mango
+Mango 2.jpg,Mango
+Mango 3.jpg,Mango
+Mango 4.jpg,Mango
+Orange 1.jpg,Orange
+Orange 2.jpg,Orange
+Potato 1.jpg,Potato
+Potato.jpg,Potato
+Tomato 1.jpg,Tomato
+Tomato small.jpg,Tomato small
+apple 1.jpg,Apple
+apple 2.jpg,Apple
+apple 3.jpg,Apple
+banana 1.jpg,Banana
+beetroot 1.jpg,Beetroot
+beetroot 2.jpg,Beetroot
+cashews 1.jpg,Cashews
+coconut 1.jpg,Coconut
+coconut 2.jpg,Coconut
+corn 1.jpg,Corn
+corn 2.jpg,Corn
+ginger 1.jpg,Ginger
+ginger 2.jpg,Ginger
+mango 10.jpg,Mango
+mango 11.jpg,Mango
+mango 5.jpg,Mango
+mango 6.jpg,Mango
+mango 7.jpg,Mango
+mango 8.jpg,Mango
+mango 9.jpg,Mango
+melon 1.jpg,Melon
+melon 2.jpg,Melon
+melon 3.jpg,Melon
+melon 4.jpg,Melon
+orange 3.jpg,Orange
+orange 4.jpg,Orange
+pear 1.jpg,Pear
+pear 2.jpg,Pear
+pineapple 1.jpg,Pineapple
+watermelon 2.jpg,Watermelon
+watermelon 3.jpg,Watermelon
+watermelon1.jpg,Watermelon

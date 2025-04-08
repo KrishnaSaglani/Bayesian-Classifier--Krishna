@@ -1,0 +1,189 @@
+# Enhanced Feature Extractor with HSV Histogram and Improved Texture Features
+
+import os
+import cv2
+import numpy as np
+import pandas as pd
+import logging
+from skimage.feature import local_binary_pattern, graycomatrix, graycoprops
+
+def extract_features(data_dir, output_csv, log_file):
+    class_mapping = {
+    # Custom filename mappings
+    "apple 1.jpg": "Apple", "apple 2.jpg": "Apple", "apple 3.jpg": "Apple",
+    "banana 1.jpg": "Banana", "Banana 2.jpg": "Banana",
+    "beetroot 1.jpg": "Beetroot", "beetroot 2.jpg": "Beetroot",
+    "cashews 1.jpg": "Cashew",
+    "coconut 1.jpg": "Coconut", "coconut 2.jpg": "Coconut",
+    "corn 1.jpg": "Corn", "corn 2.jpg": "Corn",
+    "ginger 1.jpg": "Ginger", "ginger 2.jpg": "Ginger",
+    "Grapes 1.jpg": "Grape", "Grapes 2.jpg": "Grape",
+    "Lemon 1.jpg": "Lemon",
+    "Mango 1.jpg": "Mango", "mango 10.jpg": "Mango", "mango 11.jpg": "Mango",
+    "Mango 2.jpg": "Mango", "Mango 3.jpg": "Mango", "Mango 4.jpg": "Mango",
+    "mango 5.jpg": "Mango", "mango 6.jpg": "Mango", "mango 7.jpg": "Mango",
+    "mango 8.jpg": "Mango", "mango 9.jpg": "Mango",
+    "melon 1.jpg": "Melon", "melon 2.jpg": "Melon", "melon 3.jpg": "Melon", "melon 4.jpg": "Melon",
+    "Orange 1.jpg": "Orange", "Orange 2.jpg": "Orange",
+    "orange 3.jpg": "Orange", "orange 4.jpg": "Orange",
+    "pear 1.jpg": "Pear", "pear 2.jpg": "Pear",
+    "pineapple 1.jpg": "Pineapple",
+    "Potato 1.jpg": "Potato", "Potato.jpg": "Potato",
+    "Tomato 1.jpg": "Tomato", "Tomato small.jpg": "Tomato",
+    "watermelon 2.jpg": "Watermelon", "watermelon 3.jpg": "Watermelon", "watermelon1.jpg": "Watermelon",
+
+    # Original dataset mappings
+    "Apple 10": "Apple", "Apple 12": "Apple", "Apple 13": "Apple", "Apple 14": "Apple", "Apple 17": "Apple",
+    "Apple 19": "Apple", "Apple 6": "Apple", "Apple 9": "Apple", "Apple Braeburn 1": "Apple",
+    "Apple Core 1": "Apple", "Apple Crimson Snow 1": "Apple", "Apple Golden 1": "Apple",
+    "Apple Golden 2": "Apple", "Apple Golden 3": "Apple", "Apple Granny Smith 1": "Apple",
+    "Apple hit 1": "Apple", "Apple Pink Lady 1": "Apple", "Apple Red 1": "Apple", "Apple Red 2": "Apple",
+    "Apple Red 3": "Apple", "Apple Red Delicious 1": "Apple", "Apple Red Yellow 1": "Apple",
+    "Apple Red Yellow 2": "Apple", "Apple Rotten 1": "Apple", "Apple worm 1": "Apple",
+    "Apricot 1": "Apricot", "Avocado 1": "Avocado", "Avocado ripe 1": "Avocado",
+    "Banana 1": "Banana", "Banana 3": "Banana", "Banana Lady Finger 1": "Banana", "Banana Red 1": "Banana",
+    "Beans 1": "Beans", "Beetroot 1": "Beetroot", "Blackberrie 1": "Blackberry", "Blackberrie 2": "Blackberry",
+    "Blackberrie half rippen 1": "Blackberry", "Blackberrie not rippen 1": "Blackberry", "Blueberry 1": "Blueberry",
+    "Cabbage red 1": "Cabbage", "Cabbage white 1": "Cabbage", "Cactus fruit 1": "Cactus fruit",
+    "Cactus fruit green 1": "Cactus fruit", "Cactus fruit red 1": "Cactus fruit", "Cantaloupe 1": "Cantaloupe",
+    "Cantaloupe 2": "Cantaloupe", "Carambula 1": "Carambula", "Carrot 1": "Carrot", "Cauliflower 1": "Cauliflower",
+    "Cherimoya 1": "Cherimoya", "Cherry 1": "Cherry", "Cherry 2": "Cherry", "Cherry Rainier 1": "Cherry",
+    "Cherry Wax Black 1": "Cherry", "Cherry Wax not rippen 1": "Cherry", "Cherry Wax Red 1": "Cherry",
+    "Cherry Wax Yellow 1": "Cherry", "Chestnut 1": "Chestnut", "Clementine 1": "Clementine",
+    "Cocos 1": "Coconut", "Corn 1": "Corn", "Corn Husk 1": "Corn", "Cucumber 1": "Cucumber",
+    "Cucumber 10": "Cucumber", "Cucumber 3": "Cucumber", "Cucumber 9": "Cucumber",
+    "Cucumber Ripe 1": "Cucumber", "Cucumber Ripe 2": "Cucumber", "Dates 1": "Dates",
+    "Eggplant 1": "Eggplant", "Eggplant long 1": "Eggplant", "Fig 1": "Fig", "Ginger Root 1": "Ginger",
+    "Gooseberry 1": "Gooseberry", "Granadilla 1": "Granadilla", "Grape Blue 1": "Grape",
+    "Grape Pink 1": "Grape", "Grape White 1": "Grape", "Grape White 2": "Grape", "Grape White 3": "Grape",
+    "Grape White 4": "Grape", "Grapefruit Pink 1": "Grapefruit", "Grapefruit White 1": "Grapefruit",
+    "Guava 1": "Guava", "Hazelnut 1": "Hazelnut", "Huckleberry 1": "Huckleberry", "Kaki 1": "Kaki",
+    "Kiwi 1": "Kiwi", "Kohlrabi 1": "Kohlrabi", "Kumquats 1": "Kumquat", "Lemon 1": "Lemon",
+    "Lemon Meyer 1": "Lemon", "Limes 1": "Lime", "Lychee 1": "Lychee", "Mandarine 1": "Mandarine",
+    "Mango 1": "Mango", "Mango Red 1": "Mango", "Mangostan 1": "Mangosteen", "Maracuja 1": "Passion Fruit",
+    "Melon Piel de Sapo 1": "Melon", "Mulberry 1": "Mulberry", "Nectarine 1": "Nectarine",
+    "Nectarine Flat 1": "Nectarine", "Nut Forest 1": "Nut", "Nut Pecan 1": "Nut", "Onion Red 1": "Onion",
+    "Onion Red Peeled 1": "Onion", "Onion White 1": "Onion", "Orange 1": "Orange", "Papaya 1": "Papaya",
+    "Passion Fruit 1": "Passion Fruit", "Peach 1": "Peach", "Peach 2": "Peach", "Peach Flat 1": "Peach",
+    "Pear 1": "Pear", "Pear 2": "Pear", "Pear 3": "Pear", "Pear Abate 1": "Pear", "Pear Forelle 1": "Pear",
+    "Pear Kaiser 1": "Pear", "Pear Monster 1": "Pear", "Pear Red 1": "Pear", "Pear Stone 1": "Pear",
+    "Pear Williams 1": "Pear", "Pepino 1": "Pepino", "Pepper Green 1": "Pepper", "Pepper Orange 1": "Pepper",
+    "Pepper Red 1": "Pepper", "Pepper Yellow 1": "Pepper", "Physalis 1": "Physalis",
+    "Physalis with Husk 1": "Physalis", "Pineapple 1": "Pineapple", "Pineapple Mini 1": "Pineapple",
+    "Pistachio 1": "Pistachio", "Pitahaya Red 1": "Pitahaya", "Plum 1": "Plum", "Plum 2": "Plum",
+    "Plum 3": "Plum", "Pomegranate 1": "Pomegranate", "Pomelo Sweetie 1": "Pomelo",
+    "Potato Red 1": "Potato", "Potato Red Washed 1": "Potato", "Potato Sweet 1": "Potato",
+    "Potato White 1": "Potato", "Quince 1": "Quince", "Quince 2": "Quince", "Quince 3": "Quince",
+    "Quince 4": "Quince", "Rambutan 1": "Rambutan", "Raspberry 1": "Raspberry", "Redcurrant 1": "Redcurrant",
+    "Salak 1": "Salak", "Strawberry 1": "Strawberry", "Strawberry Wedge 1": "Strawberry", "Tamarillo 1": "Tamarillo",
+    "Tangelo 1": "Tangelo", "Tomato 1": "Tomato", "Tomato 2": "Tomato", "Tomato 3": "Tomato",
+    "Tomato 4": "Tomato", "Tomato Cherry Red 1": "Tomato", "Tomato Heart 1": "Tomato",
+    "Tomato Maroon 1": "Tomato", "Tomato not Ripened 1": "Tomato", "Tomato Yellow 1": "Tomato",
+    "Walnut 1": "Walnut", "Watermelon 1": "Watermelon", "Zucchini 1": "Zucchini",
+    "Zucchini dark 1": "Zucchini"
+}
+
+
+    logging.basicConfig(filename=log_file, level=logging.INFO, format='%(asctime)s - %(message)s')
+
+    features = []
+    labels = []
+
+    total_images = sum([
+        len(os.listdir(os.path.join(data_dir, fruit_class)))
+        for fruit_class in os.listdir(data_dir)
+        if os.path.isdir(os.path.join(data_dir, fruit_class))
+    ])
+    processed_images = 0
+
+    logging.info(f"Started feature extraction from {data_dir}. Total images to process: {total_images}")
+    print(f"Started feature extraction from {data_dir}. Total images to process: {total_images}")
+
+    for fruit_class in os.listdir(data_dir):
+        class_path = os.path.join(data_dir, fruit_class)
+        if not os.path.isdir(class_path):
+            continue
+
+        base_class = class_mapping.get(fruit_class, None)
+        if base_class is None:
+            logging.warning(f"No mapping found for: {fruit_class}. Skipping.")
+            print(f"Skipping class (no mapping): {fruit_class}")
+            continue
+
+        logging.info(f"Processing class: {fruit_class} -> {base_class}")
+        print(f"Processing class: {fruit_class} -> {base_class}")
+
+        for img_name in os.listdir(class_path):
+            img_path = os.path.join(class_path, img_name)
+            img = cv2.imread(img_path)
+            if img is None:
+                logging.warning(f"Skipping unreadable image: {img_name}")
+                continue
+
+            img = cv2.resize(img, (100, 100))
+
+            # HSV Histogram (enhanced color feature)
+            hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+            hsv_hist = cv2.calcHist([hsv], [0, 1, 2], None, [16, 8, 8], [0, 180, 0, 256, 0, 256])
+            hsv_hist = cv2.normalize(hsv_hist, hsv_hist).flatten()
+
+            # LBP (improved texture feature)
+            gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+            lbp = local_binary_pattern(gray, P=24, R=3, method='uniform')
+            lbp_hist, _ = np.histogram(lbp.ravel(), bins=np.arange(0, 27), range=(0, 26))
+            lbp_hist = lbp_hist.astype("float") / lbp_hist.sum()
+
+            # Haralick texture features
+            glcm = graycomatrix(gray, distances=[1], angles=[0], levels=256, symmetric=True, normed=True)
+            contrast = graycoprops(glcm, 'contrast')[0, 0]
+            correlation = graycoprops(glcm, 'correlation')[0, 0]
+            energy = graycoprops(glcm, 'energy')[0, 0]
+            homogeneity = graycoprops(glcm, 'homogeneity')[0, 0]
+            haralick_features = np.array([contrast, correlation, energy, homogeneity])
+
+            # Hu Moments (shape feature)
+            moments = cv2.moments(gray)
+            hu_moments = cv2.HuMoments(moments).flatten()
+            hu_moments = -np.sign(hu_moments) * np.log10(np.abs(hu_moments) + 1e-10)
+
+            # Combine features
+            feature_vector = np.hstack([hsv_hist, lbp_hist, haralick_features, hu_moments])
+            features.append(feature_vector)
+            labels.append(base_class)
+
+            processed_images += 1
+            if processed_images % 50 == 0:
+                percent = (processed_images / total_images) * 100
+                logging.info(f"Processed {processed_images}/{total_images} images ({percent:.2f}%)")
+                print(f"Processed {processed_images}/{total_images} images ({percent:.2f}%)")
+
+    df = pd.DataFrame(features)
+    df['label'] = labels
+    df.to_csv(output_csv, index=False)
+
+    logging.info(f"Feature extraction complete. Saved to {output_csv}")
+    print(f"Feature extraction complete. Saved to {output_csv}")
+
+if __name__ == "__main__":
+    os.makedirs("features", exist_ok=True)
+
+    # Uncomment this to make training csv
+    # extract_features(
+    #     data_dir="fruits-360/Training",
+    #     output_csv="features/train_advanced_features.csv",
+    #     log_file="features/train_advanced_features.log"
+    # )
+
+    # To extract test set features, uncomment below
+    # extract_features(
+    #     data_dir="fruits-360/Test",
+    #     output_csv="features/test_advanced_features.csv",
+    #     log_file="features/test_advanced_features.log"
+    # )
+
+    # To extract custom set features, uncomment below
+    extract_features(
+        data_dir="fruits-360/custom_images",
+        output_csv="features/custom_adv_features.csv",
+        log_file="features/custom_adv_features.log"
+    )

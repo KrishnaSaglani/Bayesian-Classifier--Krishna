@@ -17,7 +17,7 @@ def train():
         logging.StreamHandler()
     ])
 
-    data = pd.read_csv('features/train_features.csv')
+    data = pd.read_csv('features/train_adv_pca.csv')
     X = data.iloc[:, :-1].values
     y = data.iloc[:, -1].values
 

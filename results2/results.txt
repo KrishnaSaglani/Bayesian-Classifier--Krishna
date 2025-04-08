@@ -1,0 +1,83 @@
+Accuracy: 0.9178
+
+Classification Report:
+               precision    recall  f1-score   support
+
+        Apple       0.87      0.85      0.86      4443
+      Apricot       1.00      1.00      1.00       164
+      Avocado       1.00      1.00      1.00       309
+       Banana       0.70      0.75      0.72       561
+        Beans       0.51      1.00      0.67        77
+     Beetroot       1.00      0.68      0.81       150
+   Blackberry       1.00      0.97      0.98       600
+    Blueberry       1.00      1.00      1.00       154
+      Cabbage       1.00      1.00      1.00        96
+ Cactus fruit       0.81      0.83      0.82       634
+   Cantaloupe       1.00      1.00      1.00       328
+    Carambula       0.84      0.77      0.81       166
+       Carrot       0.77      1.00      0.87        50
+  Cauliflower       1.00      1.00      1.00       234
+    Cherimoya       1.00      1.00      1.00       320
+       Cherry       0.97      0.88      0.92      1373
+     Chestnut       0.79      1.00      0.88       153
+   Clementine       1.00      1.00      1.00       166
+      Coconut       1.00      0.99      0.99       166
+         Corn       0.67      0.44      0.53       304
+     Cucumber       0.98      0.91      0.94       811
+        Dates       1.00      0.99      0.99       166
+     Eggplant       1.00      0.78      0.88       236
+          Fig       1.00      1.00      1.00       234
+       Ginger       0.91      1.00      0.95        99
+   Gooseberry       1.00      1.00      1.00       154
+   Granadilla       1.00      1.00      1.00       166
+        Grape       0.93      1.00      0.96      1146
+   Grapefruit       0.96      1.00      0.98       330
+        Guava       1.00      0.99      1.00       166
+     Hazelnut       1.00      1.00      1.00       157
+  Huckleberry       1.00      1.00      1.00       166
+         Kaki       1.00      0.99      1.00       166
+         Kiwi       1.00      1.00      1.00       156
+     Kohlrabi       1.00      0.99      0.99       157
+      Kumquat       1.00      1.00      1.00       166
+        Lemon       0.91      0.95      0.93       330
+         Lime       1.00      1.00      1.00       166
+       Lychee       1.00      1.00      1.00       166
+    Mandarine       1.00      1.00      1.00       166
+        Mango       1.00      0.90      0.95       308
+   Mangosteen       1.00      1.00      1.00       102
+        Melon       1.00      0.93      0.97       246
+     Mulberry       1.00      1.00      1.00       164
+    Nectarine       0.66      0.93      0.77       324
+          Nut       1.00      0.87      0.93       396
+        Onion       0.93      0.94      0.94       451
+       Orange       1.00      1.00      1.00       160
+       Papaya       0.86      1.00      0.93       164
+Passion Fruit       1.00      0.92      0.96       332
+        Peach       0.94      0.94      0.94       574
+         Pear       0.80      0.88      0.84      1761
+       Pepino       1.00      1.00      1.00       166
+       Pepper       0.96      0.88      0.92       826
+     Physalis       0.98      0.90      0.94       328
+    Pineapple       1.00      1.00      1.00       329
+    Pistachio       1.00      1.00      1.00       231
+     Pitahaya       1.00      0.79      0.88       166
+         Plum       0.72      1.00      0.84       597
+  Pomegranate       0.96      0.96      0.96       164
+       Pomelo       1.00      1.00      1.00       153
+       Potato       0.97      0.88      0.93       601
+       Quince       0.87      0.96      0.91       897
+     Rambutan       1.00      1.00      1.00       164
+    Raspberry       0.99      1.00      1.00       166
+   Redcurrant       1.00      1.00      1.00       164
+        Salak       1.00      1.00      1.00       162
+   Strawberry       1.00      0.97      0.99       410
+    Tamarillo       1.00      1.00      1.00       166
+      Tangelo       1.00      1.00      1.00       166
+       Tomato       0.98      0.92      0.95      1707
+       Walnut       1.00      1.00      1.00       249
+   Watermelon       0.93      1.00      0.96       157
+     Zucchini       0.98      1.00      0.99       160
+
+     accuracy                           0.92     28863
+    macro avg       0.95      0.95      0.95     28863
+ weighted avg       0.92      0.92      0.92     28863
