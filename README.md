@@ -8,14 +8,13 @@ reduce noisy data and reduces the total number of features from 1061 to 414.
 
 To use this classifier, kindly follow the following steps:
 
+
 1.                  run custom_extractor.py 
 What this does:
 
     This is a feature extractor.
     All the corresponding data generated as a result will 
     be stored in the features folder. 
-    This will take a lot of time, so I have done it already.
-    So, you can directly run main.py and see the results yourself.
 
 
 2.                  run main.py
@@ -47,6 +46,14 @@ What this does:
 They will be stored in the folder:
 results2 (for data of provided dataset ) and 
 in the folder custom_results (for any custom data that you may have entered into folder fruits-360/custom_images).
+
+The final accuracy of the model is 91.78 percent.
+
+This turned up in 3rd version of model.
+First and second versions gave a test accuracy of 
+merely 30 and 70 percent approximately. This final rise from
+70 to almost 92 percent is largely attributed to the data 
+standardization and pca reduction that I incorporated in the end.
 
 Of course, all results will be shown sequentially on terminal when you run main.py as well.
 

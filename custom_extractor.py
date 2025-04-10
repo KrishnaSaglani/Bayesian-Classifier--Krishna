@@ -216,21 +216,21 @@ def extract_features(data_dir, output_csv, log_file, custom_mode=False):
 if __name__ == "__main__":
     os.makedirs("features", exist_ok=True)
 
-    # Uncomment this to make training csv
+    # for training data
     extract_features(
         data_dir="fruits-360/Training",
         output_csv="features/train_advanced_features.csv",
         log_file="features/train_advanced_features.log"
     )
 
-    # To extract test set features, uncomment below
+    # for test data
     extract_features(
         data_dir="fruits-360/Test",
         output_csv="features/test_advanced_features.csv",
         log_file="features/test_advanced_features.log"
     )
 
-    # To extract custom set features, uncomment below
+    # for custom test data(inputed by user)
     extract_features(
         data_dir="fruits-360/custom_images",
         output_csv="features/custom_adv_features.csv",
