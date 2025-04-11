@@ -61,6 +61,7 @@ Of course, all results will be shown sequentially on terminal when you run main.
 
 4.                  Front End
 In order to deploy the front end for this project follow the following simple steps.
+
     a. Ensure that you have streamlit package installed on your local device. If not, simply run:
                 pip install streamlit 
     command in bash
@@ -71,7 +72,8 @@ In order to deploy the front end for this project follow the following simple st
 
     b. On the UI, simply upload or drage and drop the images you choose to classify and 
     press the Classify button. The prediction will be displayed immediately.
-    
+
+
 
                     Thank You.
         We hope you like the 'fruits' of our labour:)
