@@ -14,7 +14,8 @@ What this does:
 
     This is a feature extractor.
     All the corresponding data generated as a result will 
-    be stored in the features folder. 
+    be stored in the features folder. Kindly ensure that the repository you have cloned includes a 
+    featured folder. If not, simply create it.
 
 
 2.                  run main.py
@@ -56,6 +57,21 @@ merely 30 and 70 percent approximately. This final rise from
 standardization and pca reduction that I incorporated in the end.
 
 Of course, all results will be shown sequentially on terminal when you run main.py as well.
+
+
+4.                  Front End
+In order to deploy the front end for this project follow the following simple steps.
+    a. Ensure that you have streamlit package installed on your local device. If not, simply run:
+                pip install streamlit 
+    command in bash
+
+    b. Once this is done, kindly open bash again and open your current directory. Now simply run:
+                python -m streamlit run front_end/Streamlit.py
+    Now a UI will be deployed on your local machine and you are free to classify away.
+
+    b. On the UI, simply upload or drage and drop the images you choose to classify and 
+    press the Classify button. The prediction will be displayed immediately.
+    
 
                     Thank You.
         We hope you like the 'fruits' of our labour:)
