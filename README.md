@@ -43,27 +43,29 @@ What this does:
 
 3.                  Results
 
-They will be stored in the folder:
-results2 (for data of provided dataset ) and 
-in the folder custom_results (for any custom data that you may have entered into folder fruits-360/custom_images).
+They will be stored in the folder: 
+'**results2**' (for data of provided dataset ) and 
+in the folder 'custom_results' (for any custom data that you may have entered into folder fruits-360/custom_images).
 
-The final accuracy of the model is 91.78 percent.
+The final accuracy of the model is **91.78 percent.**
 
 This turned up in 3rd version of model.
 First and second versions gave a test accuracy of 
 merely 30 and 70 percent approximately. This final rise from
 70 to almost 92 percent is largely attributed to the data 
-standardization and pca reduction that I incorporated in the end.
+standardization and pca reduction that I incorporated in the end. The results
+of these older versions have been stored in the folders 'results0' and 'results1' 
+for your reference.
 
 Of course, all results will be shown sequentially on terminal when you run main.py as well.
 
 
-4.                  Front End
+Note.                  Front End
 In order to deploy the front end for this project follow the following simple steps.
 
     a. Ensure that you have streamlit package installed on your local device. If not, simply run:
                 pip install streamlit 
-    command in bash
+    command in bash.
 
     b. Once this is done, kindly open bash again and open your current directory. Now simply run:
                 python -m streamlit run front_end/Streamlit.py
