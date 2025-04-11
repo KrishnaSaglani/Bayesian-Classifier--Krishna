@@ -14,8 +14,7 @@ What this does:
 
     This is a feature extractor.
     All the corresponding data generated as a result will 
-    be stored in the features folder. Kindly ensure that the repository you have cloned includes a 
-    featured folder. If not, simply create it.
+    be stored in the features folder.
 
 
 2.                  run main.py
