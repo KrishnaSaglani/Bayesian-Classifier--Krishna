@@ -45,7 +45,7 @@ What this does:
 
 They will be stored in the folder: 
 '**results2**' (for data of provided dataset ) and 
-in the folder 'custom_results' (for any custom data that you may have entered into folder fruits-360/custom_images).
+in the folder '**custom_results**' (for any custom data that you may have entered into folder fruits-360/custom_images).
 
 The final accuracy of the model is **91.78 percent.**
 
@@ -60,8 +60,8 @@ for your reference.
 Of course, all results will be shown sequentially on terminal when you run main.py as well.
 
 
-Note.                  Front End
-In order to deploy the front end for this project follow the following simple steps.
+Note.
+In order to deploy the **front-end** for this project follow the following simple steps.
 
     a. Ensure that you have streamlit package installed on your local device. If not, simply run:
                 pip install streamlit 
