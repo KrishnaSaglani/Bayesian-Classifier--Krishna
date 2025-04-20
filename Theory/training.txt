@@ -1,0 +1,51 @@
+1.
+        def calculate_class_priors(labels):
+                priors = {}
+                total = len(labels)
+                for label in np.unique(labels):
+                    priors[label] = np.sum(labels == label) / total
+                return priors
+
+for each class (label) finding pbb of finding it in total train dataset.
+    priors[label] = np.sum(labels == label) / total
+for each label in whole list-> prior equals total number of times the label in labels == label / total 
+
+
+2.  
+        def calculate_means_and_variances(X, y):
+                means = {}
+                variances = {}
+                for label in np.unique(y):
+                    class_data = X[y == label]
+                    means[label] = np.mean(class_data, axis=0)
+                    variances[label] = np.var(class_data, axis=0) + 1e-4
+                return means, variances
+
+y-> list of all merged labels, however due to merging there are repeated class names ex multiple
+names with 'apple'. class data is data matrix storing all the data for a particular class.
+now for this matrix its easy to find the means and variances pertaining to that particular class. 
+
+3.
+
+        def predict(X, class_priors, means, variances, unique_classes):
+            predictions = []
+            total_samples = len(X)
+            logging.info(f"Making predictions on {total_samples} test samples...")
+            start_time = time.time()
+
+            for idx, sample in enumerate(X):
+                class_probabilities = {}
+                for label in unique_classes:
+                    prior = np.log(class_priors[label] + 1e-9)
+                    likelihood = np.sum(np.log(gaussian_likelihood(sample, means[label], variances[label]) + 1e-9))
+                    class_probabilities[label] = prior + likelihood
+
+                best_label = max(class_probabilities, key=class_probabilities.get)
+                predictions.append(best_label)
+
+                if (idx + 1) % 100 == 0 or (idx + 1) == total_samples:
+                    logging.info(f"Predicted {idx + 1}/{total_samples} samples... ({(idx + 1) / total_samples * 100:.2f}%)")
+
+
+
+same predict function being used in both validation and testing.
